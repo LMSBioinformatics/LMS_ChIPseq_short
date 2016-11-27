@@ -300,7 +300,7 @@ Quality Control (Assessing fragment length)
 <img src="shifts.gif" alt="offset" height="300" width="1400">
 </div>
 <div align="center">
-<img src="cor.gif" alt="offset" height="300" width="1400">
+<img src="cor.gif" alt="offset" height="600" width="1400">
 </div>
 
 
@@ -970,13 +970,13 @@ peakAnno <- annotatePeak(commonPeaks, tssRegion = c(-1000, 1000), TxDb = TxDb.Mm
 ```
 
 ```
->> preparing features information...		 2016-11-27 15:53:02 
->> identifying nearest features...		 2016-11-27 15:53:03 
->> calculating distance from peak to TSS...	 2016-11-27 15:53:04 
->> assigning genomic annotation...		 2016-11-27 15:53:04 
->> adding gene annotation...			 2016-11-27 15:53:13 
->> assigning chromosome lengths			 2016-11-27 15:53:18 
->> done...					 2016-11-27 15:53:18 
+>> preparing features information...		 2016-11-27 20:58:59 
+>> identifying nearest features...		 2016-11-27 20:59:00 
+>> calculating distance from peak to TSS...	 2016-11-27 20:59:01 
+>> assigning genomic annotation...		 2016-11-27 20:59:01 
+>> adding gene annotation...			 2016-11-27 20:59:14 
+>> assigning chromosome lengths			 2016-11-27 20:59:24 
+>> done...					 2016-11-27 20:59:24 
 ```
 
 Peak annotation
