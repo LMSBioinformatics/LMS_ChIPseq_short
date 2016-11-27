@@ -275,6 +275,17 @@ Quality Control (Assessing fragment length)
 <img src="imgs/offset.jpg" alt="offset" height="900" width="900">
 </div>
 
+
+Quality Control (Assessing fragment length)
+========================================================
+<div align="center">
+<img src="shifts.gif" alt="offset" height="300" width="1400">
+</div>
+<div align="center">
+<img src="cor.gif" alt="offset" height="300" width="1400">
+</div>
+
+
 Quality Control (Assessing fragment length)
 ========================================================
 <div align="center">
@@ -1210,6 +1221,8 @@ For now, we can import the counts produced on this course into our present R ses
 
 ```{r, echo=TRUE}
 load("data/robjects/MycCounts.Rdata")
+countTable <- countTable[,-c(3,6)]
+
 countTable[1:3,]
 ```
 
@@ -1224,10 +1237,10 @@ In contrast to the RNAseq DEseq2 setup we will provide additional information of
 ```{r, echo=TRUE}
 library("DESeq2")
 
-colData <- data.frame(SampleName=colnames(countTable[,-c(3,6)]),
-                      CellLine=c("ch12","ch12","mel","mel"))
+colData <- data.frame(SampleName=paste0(colnames(countTable),c(1,2)), CellLine=c("ch12","ch12","mel","mel"))
 
-dds <- DESeqDataSetFromMatrix(countData = countTable[,-c(3,6)],
+colnames(countTable) <-  colData$SampleName
+dds <- DESeqDataSetFromMatrix(countData = countTable,
                               colData = colData,
                               design = ~ CellLine,
                               rowRanges=PeaksToCount)
