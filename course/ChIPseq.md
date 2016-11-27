@@ -293,6 +293,17 @@ Quality Control (Assessing fragment length)
 <img src="imgs/offset.jpg" alt="offset" height="900" width="900">
 </div>
 
+
+Quality Control (Assessing fragment length)
+========================================================
+<div align="center">
+<img src="shifts.gif" alt="offset" height="300" width="1400">
+</div>
+<div align="center">
+<img src="cor.gif" alt="offset" height="300" width="1400">
+</div>
+
+
 Quality Control (Assessing fragment length)
 ========================================================
 <div align="center">
@@ -513,19 +524,20 @@ ranges(macsPeaks_GR)
 ```
 
 ```
-IRanges of length 33498
-          start     end width
-[1]     4480665 4480849   185
-[2]     4661593 4661934   342
-[3]     4774202 4774393   192
-[4]     4775399 4775792   394
-[5]     4775957 4776125   169
-...         ...     ...   ...
-[33494]  234019  234250   232
-[33495]  307766  308084   319
-[33496]  582005  582258   254
-[33497]  622964  623320   357
-[33498] 2721204 2721372   169
+IRanges object with 33498 ranges and 0 metadata columns:
+              start       end     width
+          <integer> <integer> <integer>
+      [1]   4480665   4480849       185
+      [2]   4661593   4661934       342
+      [3]   4774202   4774393       192
+      [4]   4775399   4775792       394
+      [5]   4775957   4776125       169
+      ...       ...       ...       ...
+  [33494]    234019    234250       232
+  [33495]    307766    308084       319
+  [33496]    582005    582258       254
+  [33497]    622964    623320       357
+  [33498]   2721204   2721372       169
 ```
 
 Working with Peaks - Peaks as GRanges
@@ -541,32 +553,19 @@ macsPeaks_GR
 
 ```
 GRanges object with 33498 ranges and 2 metadata columns:
-          seqnames             ranges strand   | abs_summit
-             <Rle>          <IRanges>  <Rle>   |  <integer>
-      [1]        1 [4480665, 4480849]      *   |    4480769
-      [2]        1 [4661593, 4661934]      *   |    4661762
-      [3]        1 [4774202, 4774393]      *   |    4774293
-      [4]        1 [4775399, 4775792]      *   |    4775544
-      [5]        1 [4775957, 4776125]      *   |    4776021
-      ...      ...                ...    ... ...        ...
-  [33494]        Y [ 234019,  234250]      *   |     234139
-  [33495]        Y [ 307766,  308084]      *   |     307929
-  [33496]        Y [ 582005,  582258]      *   |     582128
-  [33497]        Y [ 622964,  623320]      *   |     623149
-  [33498]        Y [2721204, 2721372]      *   |    2721341
-          fold_enrichment
-                <numeric>
-      [1]         4.45956
-      [2]        11.09288
-      [3]         4.13574
-      [4]         7.31683
-      [5]         3.17407
-      ...             ...
-  [33494]         5.10991
-  [33495]        18.80093
-  [33496]         5.08412
-  [33497]         7.89867
-  [33498]         6.14918
+          seqnames             ranges strand | abs_summit fold_enrichment
+             <Rle>          <IRanges>  <Rle> |  <integer>       <numeric>
+      [1]        1 [4480665, 4480849]      * |    4480769         4.45956
+      [2]        1 [4661593, 4661934]      * |    4661762        11.09288
+      [3]        1 [4774202, 4774393]      * |    4774293         4.13574
+      [4]        1 [4775399, 4775792]      * |    4775544         7.31683
+      [5]        1 [4775957, 4776125]      * |    4776021         3.17407
+      ...      ...                ...    ... .        ...             ...
+  [33494]        Y [ 234019,  234250]      * |     234139         5.10991
+  [33495]        Y [ 307766,  308084]      * |     307929        18.80093
+  [33496]        Y [ 582005,  582258]      * |     582128         5.08412
+  [33497]        Y [ 622964,  623320]      * |     623149         7.89867
+  [33498]        Y [2721204, 2721372]      * |    2721341         6.14918
   -------
   seqinfo: 22 sequences from an unspecified genome; no seqlengths
 ```
@@ -613,19 +612,19 @@ macsPeaks_GR[seqnames(macsPeaks_GR) %in% "1"]
 
 ```
 GRanges object with 2257 ranges and 2 metadata columns:
-         seqnames                 ranges strand   | abs_summit
-            <Rle>              <IRanges>  <Rle>   |  <integer>
-     [1]        1     [4480665, 4480849]      *   |    4480769
-     [2]        1     [4661593, 4661934]      *   |    4661762
-     [3]        1     [4774202, 4774393]      *   |    4774293
-     [4]        1     [4775399, 4775792]      *   |    4775544
-     [5]        1     [4775957, 4776125]      *   |    4776021
-     ...      ...                    ...    ... ...        ...
-  [2253]        1 [196603937, 196604107]      *   |  196604025
-  [2254]        1 [196643096, 196643377]      *   |  196643232
-  [2255]        1 [196706013, 196706236]      *   |  196706154
-  [2256]        1 [196956950, 196957403]      *   |  196957192
-  [2257]        1 [196957597, 196957944]      *   |  196957689
+         seqnames                 ranges strand | abs_summit
+            <Rle>              <IRanges>  <Rle> |  <integer>
+     [1]        1     [4480665, 4480849]      * |    4480769
+     [2]        1     [4661593, 4661934]      * |    4661762
+     [3]        1     [4774202, 4774393]      * |    4774293
+     [4]        1     [4775399, 4775792]      * |    4775544
+     [5]        1     [4775957, 4776125]      * |    4776021
+     ...      ...                    ...    ... .        ...
+  [2253]        1 [196603937, 196604107]      * |  196604025
+  [2254]        1 [196643096, 196643377]      * |  196643232
+  [2255]        1 [196706013, 196706236]      * |  196706154
+  [2256]        1 [196956950, 196957403]      * |  196957192
+  [2257]        1 [196957597, 196957944]      * |  196957689
          fold_enrichment
                <numeric>
      [1]         4.45956
@@ -971,13 +970,13 @@ peakAnno <- annotatePeak(commonPeaks, tssRegion = c(-1000, 1000), TxDb = TxDb.Mm
 ```
 
 ```
->> preparing features information...		 2016-03-31 18:00:47 
->> identifying nearest features...		 2016-03-31 18:00:47 
->> calculating distance from peak to TSS...	 2016-03-31 18:00:48 
->> assigning genomic annotation...		 2016-03-31 18:00:48 
->> adding gene annotation...			 2016-03-31 18:00:59 
->> assigning chromosome lengths			 2016-03-31 18:01:12 
->> done...					 2016-03-31 18:01:12 
+>> preparing features information...		 2016-11-27 15:53:02 
+>> identifying nearest features...		 2016-11-27 15:53:03 
+>> calculating distance from peak to TSS...	 2016-11-27 15:53:04 
+>> assigning genomic annotation...		 2016-11-27 15:53:04 
+>> adding gene annotation...			 2016-11-27 15:53:13 
+>> assigning chromosome lengths			 2016-11-27 15:53:18 
+>> done...					 2016-11-27 15:53:18 
 ```
 
 Peak annotation
@@ -1012,8 +1011,8 @@ Genomic Annotation Summary:
 7         Other Exon  3.1476108
 2         1st Intron  7.4117604
 8       Other Intron 24.9201161
-6 Downstream (<=3kb)  1.4470930
-5  Distal Intergenic 30.8847835
+6 Downstream (<=3kb)  1.5242223
+5  Distal Intergenic 30.8076542
 ```
 
 
@@ -1032,16 +1031,16 @@ peakAnno_GR[1:3, ]
 
 ```
 GRanges object with 3 ranges and 12 metadata columns:
-      seqnames             ranges strand |        annotation  geneChr
-         <Rle>          <IRanges>  <Rle> |       <character> <factor>
-  [1]     chr1 [4661367, 4661934]      * | Distal Intergenic     chr1
-  [2]     chr1 [4775386, 4776125]      * |          Promoter     chr1
-  [3]     chr1 [4847417, 4848050]      * |          Promoter     chr1
+      seqnames             ranges strand |        annotation   geneChr
+         <Rle>          <IRanges>  <Rle> |       <character> <integer>
+  [1]     chr1 [4661367, 4661934]      * | Distal Intergenic         1
+  [2]     chr1 [4775386, 4776125]      * |          Promoter         1
+  [3]     chr1 [4847417, 4848050]      * |          Promoter         1
       geneStart   geneEnd geneLength geneStrand      geneId transcriptId
-      <integer> <integer>  <integer>   <factor> <character>  <character>
-  [1]   4763279   4775807      12529          -       27395   uc007afd.2
-  [2]   4763279   4775807      12529          -       27395   uc007afd.2
-  [3]   4847775   4887990      40216          +       21399   uc007afi.2
+      <integer> <integer>  <integer>  <integer> <character>  <character>
+  [1]   4763279   4775807      12529          2       27395   uc007afd.2
+  [2]   4763279   4775807      12529          2       27395   uc007afd.2
+  [3]   4847775   4887990      40216          1       21399   uc007afi.2
       distanceToTSS            ENSEMBL      SYMBOL
           <numeric>        <character> <character>
   [1]        113873 ENSMUSG00000033845      Mrpl15
@@ -1777,14 +1776,16 @@ For now, we can import the counts produced on this course into our present R ses
 
 ```r
 load("data/robjects/MycCounts.Rdata")
+countTable <- countTable[,-c(3,6)]
+
 countTable[1:3,]
 ```
 
 ```
-                      ch12myc ch12myc ch12input melmyc melmyc meinput
-ID1-1;4661451-4661850      45      81         8      0      1       5
-ID2-1;4775531-4775930      56      68        12     59     47       7
-ID3-1;4847374-4847773      51      46        17     64     70      32
+                      ch12myc ch12myc melmyc melmyc
+ID1-1;4661451-4661850      45      81      0      1
+ID2-1;4775531-4775930      56      68     59     47
+ID3-1;4847374-4847773      51      46     64     70
 ```
 
 Simple Differential binding - A simple DEseq2 DE analysis
@@ -1799,10 +1800,10 @@ In contrast to the RNAseq DEseq2 setup we will provide additional information of
 ```r
 library("DESeq2")
 
-colData <- data.frame(SampleName=colnames(countTable[,-c(3,6)]),
-                      CellLine=c("ch12","ch12","mel","mel"))
+colData <- data.frame(SampleName=paste0(colnames(countTable),c(1,2)), CellLine=c("ch12","ch12","mel","mel"))
 
-dds <- DESeqDataSetFromMatrix(countData = countTable[,-c(3,6)],
+colnames(countTable) <-  colData$SampleName
+dds <- DESeqDataSetFromMatrix(countData = countTable,
                               colData = colData,
                               design = ~ CellLine,
                               rowRanges=PeaksToCount)
@@ -1831,46 +1832,59 @@ UpinMel
 ```
 
 ```
-GRanges object with 15826 ranges and 6 metadata columns:
-          seqnames                 ranges strand   |         baseMean
-             <Rle>              <IRanges>  <Rle>   |        <numeric>
-      [1]        1     [4661451, 4661850]      *   | 33.4987258065535
-      [2]        1     [5015863, 5016262]      *   |  11.492741487773
-      [3]        1     [5210772, 5211171]      *   | 12.5818260145118
-      [4]        1     [5273188, 5273587]      *   | 15.8972913963059
-      [5]        1     [6252315, 6252714]      *   | 24.4950641604032
-      ...      ...                    ...    ... ...              ...
-  [15822]        X [166410701, 166411100]      *   | 73.6663018288351
-  [15823]        X [166417005, 166417404]      *   | 108.464233028677
-  [15824]        X [166428102, 166428501]      *   | 89.0604007646183
-  [15825]        X [166434992, 166435391]      *   | 48.2298270233863
-  [15826]        Y [   307700,    308099]      *   | 28.8586281179605
-            log2FoldChange             lfcSE             stat
-                 <numeric>         <numeric>        <numeric>
-      [1] 6.53300622785124   1.1276916314906 5.79325592690248
-      [2] 3.77874671609699 0.945067449143318 3.99838838965656
-      [3] 4.38869199955706  1.06323617407418 4.12767370652953
-      [4] 4.26668657847836 0.905895073443048 4.70991255340633
-      [5] 5.36862765313705 0.981597124874789 5.46927809494335
-      ...              ...               ...              ...
-  [15822] 4.33208594553054 0.463654288081122 9.34335356512995
-  [15823] 3.13408588068827 0.333064663101801 9.40984207541205
-  [15824] 2.82135797142288 0.361961476807962 7.79463603780064
-  [15825] 5.89273068120534 0.817108692081165 7.21168522414886
-  [15826] 6.32294913465526  1.13771012622724  5.5576099648711
-                        pvalue                 padj
-                     <numeric>            <numeric>
-      [1] 6.90347846182368e-09 5.89751365543582e-08
-      [2] 6.37752412058171e-05 0.000165214415434228
-      [3] 3.66451594577388e-05 0.000101277907728669
-      [4] 2.47823097106508e-06  9.5283994406936e-06
-      [5] 4.51872273710664e-08  2.9859355486148e-07
-      ...                  ...                  ...
-  [15822]  9.3330170587239e-21 1.64734930330368e-18
-  [15823] 4.96882908336845e-21 9.26949204446931e-19
-  [15824]  6.4594390375897e-15 3.06870161814769e-13
-  [15825]  5.5263608535483e-13 1.60516298918379e-11
-  [15826]  2.7349368097894e-08 1.94110300146698e-07
+GRanges object with 14665 ranges and 6 metadata columns:
+                                seqnames                 ranges strand |
+                                   <Rle>              <IRanges>  <Rle> |
+          ID1-1;4661451-4661850        1     [4661451, 4661850]      * |
+          ID4-1;5015863-5016262        1     [5015863, 5016262]      * |
+          ID6-1;5210772-5211171        1     [5210772, 5211171]      * |
+          ID7-1;5273188-5273587        1     [5273188, 5273587]      * |
+          ID9-1;6252315-6252714        1     [6252315, 6252714]      * |
+                            ...      ...                    ...    ... .
+  ID45884-X;166410701-166411100        X [166410701, 166411100]      * |
+  ID45885-X;166417005-166417404        X [166417005, 166417404]      * |
+  ID45886-X;166428102-166428501        X [166428102, 166428501]      * |
+  ID45887-X;166434992-166435391        X [166434992, 166435391]      * |
+        ID45889-Y;307700-308099        Y [   307700,    308099]      * |
+                                        baseMean   log2FoldChange
+                                       <numeric>        <numeric>
+          ID1-1;4661451-4661850 33.4987258065535 6.51437413413873
+          ID4-1;5015863-5016262  11.492741487773 3.71651993004389
+          ID6-1;5210772-5211171 12.5818260145118 4.33655421150083
+          ID7-1;5273188-5273587 15.8972913963059 4.21678781335758
+          ID9-1;6252315-6252714 24.4950641604032 5.34088182626826
+                            ...              ...              ...
+  ID45884-X;166410701-166411100 73.6663018288351 4.32278172136027
+  ID45885-X;166417005-166417404 108.464233028677 3.13024431036311
+  ID45886-X;166428102-166428501 89.0604007646183 2.81566635071844
+  ID45887-X;166434992-166435391 48.2298270233863 5.87635650497215
+        ID45889-Y;307700-308099 28.8586281179605 6.30308446332979
+                                            lfcSE             stat
+                                        <numeric>        <numeric>
+          ID1-1;4661451-4661850  1.16968145706261   5.569357447538
+          ID4-1;5015863-5016262  1.09452097123695 3.39556758409457
+          ID6-1;5210772-5211171  1.16914309876601 3.70917316800477
+          ID7-1;5273188-5273587  1.01609971312074 4.14997441580472
+          ID9-1;6252315-6252714   1.0422219579297 5.12451477886488
+                            ...               ...              ...
+  ID45884-X;166410701-166411100 0.517937427666784 8.34614663943795
+  ID45885-X;166417005-166417404 0.385662406096218 8.11653990869453
+  ID45886-X;166428102-166428501 0.418027479737241 6.73560109610085
+  ID45887-X;166434992-166435391 0.859196070844479 6.83936612884699
+        ID45889-Y;307700-308099  1.18505982147249 5.31879011432345
+                                              pvalue                 padj
+                                           <numeric>            <numeric>
+          ID1-1;4661451-4661850 2.55680476208758e-08  2.8472915346208e-07
+          ID4-1;5015863-5016262 0.000684864635003163  0.00174097423306737
+          ID6-1;5210772-5211171 0.000207937181052746 0.000613044655844316
+          ID7-1;5273188-5273587 3.32512438085574e-05 0.000124416313156324
+          ID9-1;6252315-6252714 2.98304952141084e-07 2.25979050241972e-06
+                            ...                  ...                  ...
+  ID45884-X;166410701-166411100 7.05262329856537e-17  1.0020402118197e-14
+  ID45885-X;166417005-166417404 4.79663030789973e-16 5.62984547545101e-14
+  ID45886-X;166428102-166428501 1.63253606730215e-11 5.35145322861645e-10
+  ID45887-X;166434992-166435391 7.95443517031384e-12 2.83640201115806e-10
+        ID45889-Y;307700-308099 1.04459552554234e-07 9.35569435171527e-07
   -------
   seqinfo: 22 sequences from an unspecified genome; no seqlengths
 ```
@@ -1884,9 +1898,9 @@ sessionInfo()
 ```
 
 ```
-R version 3.2.3 (2015-12-10)
+R version 3.3.0 (2016-05-03)
 Platform: x86_64-apple-darwin13.4.0 (64-bit)
-Running under: OS X 10.11.4 (El Capitan)
+Running under: OS X 10.11.6 (El Capitan)
 
 locale:
 [1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
@@ -1896,127 +1910,138 @@ attached base packages:
 [8] methods   base     
 
 other attached packages:
- [1] BSgenome.Mmusculus.UCSC.mm9_1.4.0      
- [2] BSgenome_1.38.0                        
- [3] rtracklayer_1.30.2                     
- [4] rGREAT_1.2.0                           
- [5] goseq_1.22.0                           
- [6] geneLenDataBase_1.6.0                  
- [7] BiasedUrn_1.07                         
- [8] KEGG.db_3.2.2                          
- [9] ChIPseeker_1.6.6                       
-[10] org.Mm.eg.db_3.2.3                     
-[11] TxDb.Mmusculus.UCSC.mm9.knownGene_3.2.2
-[12] GenomicFeatures_1.22.13                
-[13] AnnotationDbi_1.32.3                   
-[14] DESeq2_1.10.1                          
-[15] RcppArmadillo_0.6.500.4.0              
-[16] Rcpp_0.12.3                            
-[17] ChIPQC_1.6.1                           
-[18] DiffBind_1.16.3                        
-[19] RSQLite_1.0.0                          
-[20] DBI_0.3.1                              
-[21] locfit_1.5-9.1                         
-[22] GenomicAlignments_1.6.3                
-[23] Rsamtools_1.22.0                       
-[24] Biostrings_2.38.4                      
-[25] XVector_0.10.0                         
-[26] limma_3.26.8                           
-[27] SummarizedExperiment_1.0.2             
-[28] Biobase_2.30.0                         
-[29] GenomicRanges_1.22.4                   
-[30] GenomeInfoDb_1.6.3                     
-[31] IRanges_2.4.7                          
-[32] S4Vectors_0.8.11                       
-[33] BiocGenerics_0.16.1                    
-[34] ggplot2_2.0.0                          
-[35] knitr_1.12.3                           
+ [1] limma_3.28.21                          
+ [2] BSgenome.Mmusculus.UCSC.mm9_1.4.0      
+ [3] BSgenome_1.40.1                        
+ [4] rtracklayer_1.32.2                     
+ [5] Biostrings_2.40.2                      
+ [6] XVector_0.12.1                         
+ [7] rGREAT_1.4.2                           
+ [8] goseq_1.24.0                           
+ [9] geneLenDataBase_1.8.0                  
+[10] BiasedUrn_1.07                         
+[11] KEGG.db_3.2.3                          
+[12] ChIPseeker_1.8.9                       
+[13] org.Mm.eg.db_3.3.0                     
+[14] TxDb.Mmusculus.UCSC.mm9.knownGene_3.2.2
+[15] GenomicFeatures_1.24.5                 
+[16] AnnotationDbi_1.34.4                   
+[17] DESeq2_1.12.4                          
+[18] ChIPQC_1.10.1                          
+[19] DiffBind_2.2.3                         
+[20] SummarizedExperiment_1.2.3             
+[21] Biobase_2.32.0                         
+[22] GenomicRanges_1.24.3                   
+[23] GenomeInfoDb_1.8.7                     
+[24] IRanges_2.6.1                          
+[25] S4Vectors_0.10.3                       
+[26] BiocGenerics_0.18.0                    
+[27] ggplot2_2.1.0                          
+[28] knitr_1.14                             
 
 loaded via a namespace (and not attached):
- [1] amap_0.8-14                            
- [2] colorspace_1.2-6                       
- [3] rjson_0.2.15                           
- [4] hwriter_1.3.2                          
- [5] futile.logger_1.4.1                    
- [6] GlobalOptions_0.0.8                    
- [7] base64enc_0.1-3                        
- [8] splines_3.2.3                          
- [9] fail_1.3                               
-[10] geneplotter_1.48.0                     
-[11] Formula_1.2-1                          
-[12] Nozzle.R1_1.1-1                        
-[13] gridBase_0.4-7                         
-[14] annotate_1.48.0                        
-[15] cluster_2.0.3                          
-[16] GO.db_3.2.2                            
-[17] pheatmap_1.0.8                         
-[18] graph_1.48.0                           
-[19] GOstats_2.36.0                         
-[20] assertthat_0.1                         
-[21] Matrix_1.2-3                           
-[22] lazyeval_0.1.10                        
-[23] TxDb.Hsapiens.UCSC.hg19.knownGene_3.2.2
-[24] formatR_1.2.1                          
-[25] acepack_1.3-3.3                        
-[26] tools_3.2.3                            
-[27] gtable_0.1.2                           
-[28] Category_2.36.0                        
-[29] reshape2_1.4.1                         
-[30] systemPipeR_1.4.8                      
-[31] dplyr_0.4.3                            
-[32] ShortRead_1.28.0                       
-[33] gdata_2.17.0                           
-[34] nlme_3.1-122                           
-[35] stringr_1.0.0                          
-[36] gtools_3.5.0                           
-[37] XML_3.98-1.3                           
-[38] edgeR_3.12.0                           
-[39] zlibbioc_1.16.0                        
-[40] scales_0.3.0                           
-[41] RBGL_1.46.0                            
-[42] lambda.r_1.1.7                         
-[43] RColorBrewer_1.1-2                     
-[44] BBmisc_1.9                             
-[45] gridExtra_2.0.0                        
-[46] UpSetR_1.1.0                           
-[47] biomaRt_2.26.1                         
-[48] rpart_4.1-10                           
-[49] latticeExtra_0.6-28                    
-[50] stringi_1.0-1                          
-[51] highr_0.5.1                            
-[52] genefilter_1.52.1                      
-[53] plotrix_3.6-1                          
-[54] checkmate_1.7.1                        
-[55] caTools_1.17.1                         
-[56] boot_1.3-17                            
-[57] BiocParallel_1.4.3                     
-[58] chipseq_1.20.0                         
-[59] BatchJobs_1.6                          
-[60] bitops_1.0-6                           
-[61] evaluate_0.8                           
-[62] lattice_0.20-33                        
-[63] labeling_0.3                           
-[64] GSEABase_1.32.0                        
-[65] AnnotationForge_1.12.2                 
-[66] plyr_1.8.3                             
-[67] magrittr_1.5                           
-[68] sendmailR_1.2-1                        
-[69] R6_2.1.2                               
-[70] gplots_2.17.0                          
-[71] Hmisc_3.17-2                           
-[72] foreign_0.8-66                         
-[73] mgcv_1.8-9                             
-[74] survival_2.38-3                        
-[75] RCurl_1.95-4.7                         
-[76] nnet_7.3-11                            
-[77] futile.options_1.0.0                   
-[78] KernSmooth_2.23-15                     
-[79] GetoptLong_0.1.1                       
-[80] grid_3.2.3                             
-[81] digest_0.6.9                           
-[82] xtable_1.8-2                           
-[83] brew_1.0-6                             
-[84] munsell_0.4.3                          
+  [1] amap_0.8-14                              
+  [2] colorspace_1.2-6                         
+  [3] rjson_0.2.15                             
+  [4] hwriter_1.3.2                            
+  [5] qvalue_2.4.2                             
+  [6] GlobalOptions_0.0.10                     
+  [7] base64enc_0.1-3                          
+  [8] splines_3.3.0                            
+  [9] fail_1.3                                 
+ [10] TxDb.Rnorvegicus.UCSC.rn4.ensGene_3.2.2  
+ [11] GOSemSim_1.30.3                          
+ [12] geneplotter_1.50.0                       
+ [13] Formula_1.2-1                            
+ [14] Nozzle.R1_1.1-1                          
+ [15] Rsamtools_1.24.0                         
+ [16] gridBase_0.4-7                           
+ [17] annotate_1.50.0                          
+ [18] cluster_2.0.4                            
+ [19] GO.db_3.3.0                              
+ [20] pheatmap_1.0.8                           
+ [21] graph_1.50.0                             
+ [22] TxDb.Hsapiens.UCSC.hg18.knownGene_3.2.2  
+ [23] GOstats_2.38.1                           
+ [24] backports_1.0.3                          
+ [25] lazyeval_0.2.0                           
+ [26] assertthat_0.1                           
+ [27] Matrix_1.2-7.1                           
+ [28] TxDb.Hsapiens.UCSC.hg19.knownGene_3.2.2  
+ [29] formatR_1.4                              
+ [30] acepack_1.3-3.3                          
+ [31] tools_3.3.0                              
+ [32] igraph_1.0.1                             
+ [33] gtable_0.2.0                             
+ [34] Category_2.38.0                          
+ [35] reshape2_1.4.1                           
+ [36] systemPipeR_1.6.4                        
+ [37] DO.db_2.9                                
+ [38] dplyr_0.5.0                              
+ [39] ShortRead_1.30.0                         
+ [40] Rcpp_0.12.7                              
+ [41] TxDb.Dmelanogaster.UCSC.dm3.ensGene_3.2.2
+ [42] TxDb.Hsapiens.UCSC.hg38.knownGene_3.1.3  
+ [43] nlme_3.1-128                             
+ [44] gdata_2.17.0                             
+ [45] TxDb.Mmusculus.UCSC.mm10.knownGene_3.2.2 
+ [46] stringr_1.1.0                            
+ [47] gtools_3.5.0                             
+ [48] XML_3.98-1.4                             
+ [49] DOSE_2.10.7                              
+ [50] edgeR_3.14.0                             
+ [51] zlibbioc_1.18.0                          
+ [52] scales_0.4.0                             
+ [53] RBGL_1.48.1                              
+ [54] RColorBrewer_1.1-2                       
+ [55] BBmisc_1.10                              
+ [56] gridExtra_2.2.1                          
+ [57] UpSetR_1.2.4                             
+ [58] biomaRt_2.28.0                           
+ [59] rpart_4.1-10                             
+ [60] latticeExtra_0.6-28                      
+ [61] stringi_1.1.1                            
+ [62] RSQLite_1.0.0                            
+ [63] highr_0.6                                
+ [64] genefilter_1.54.2                        
+ [65] plotrix_3.6-3                            
+ [66] checkmate_1.8.1                          
+ [67] caTools_1.17.1                           
+ [68] boot_1.3-18                              
+ [69] BiocParallel_1.6.6                       
+ [70] chipseq_1.22.0                           
+ [71] chron_2.3-47                             
+ [72] BatchJobs_1.6                            
+ [73] bitops_1.0-6                             
+ [74] evaluate_0.10                            
+ [75] lattice_0.20-34                          
+ [76] TxDb.Celegans.UCSC.ce6.ensGene_3.2.2     
+ [77] GenomicAlignments_1.8.4                  
+ [78] labeling_0.3                             
+ [79] GSEABase_1.34.0                          
+ [80] AnnotationForge_1.14.2                   
+ [81] plyr_1.8.4                               
+ [82] magrittr_1.5                             
+ [83] sendmailR_1.2-1                          
+ [84] R6_2.1.3                                 
+ [85] gplots_3.0.1                             
+ [86] Hmisc_3.17-4                             
+ [87] DBI_0.5-1                                
+ [88] mgcv_1.8-14                              
+ [89] foreign_0.8-66                           
+ [90] survival_2.39-5                          
+ [91] RCurl_1.95-4.8                           
+ [92] nnet_7.3-12                              
+ [93] tibble_1.2                               
+ [94] KernSmooth_2.23-15                       
+ [95] GetoptLong_0.1.5                         
+ [96] locfit_1.5-9.1                           
+ [97] grid_3.3.0                               
+ [98] data.table_1.9.6                         
+ [99] digest_0.6.10                            
+[100] xtable_1.8-2                             
+[101] brew_1.0-6                               
+[102] munsell_0.4.3                            
 ```
 
 THE END!
