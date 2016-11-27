@@ -24,7 +24,7 @@ png(paste0("test",x,".png"),width=2000,height=1000)
 plotTracks(c(mycch12ReadsAT_Pos,mycch12ReadsAT_Neg),type="coverage",from=0,to=1000)
 dev.off()
 png(paste0("testCor_new",x,".png"),width=2000,height=1000)
-p <- ggplot(data.frame(Shift=1:x,Correlation=myCor),aes(x=Shift,y=Correlation))+geom_point(size=10,alpha=0.8)+xlim(c(0,400))+ylim(c(0,1))+stat_smooth(size=15,method="loess")
+p <- ggplot(data.frame(Shift=1:x,Correlation=myCor),aes(x=Shift,y=Correlation))+geom_point(size=10,alpha=0.8)+xlim(c(0,400))+ylim(c(0,1))+stat_smooth(size=8,method="loess")+theme(axis.title=element_text(size = 40),axis.title.y=element_text(angle=0))
 print(p)
 dev.off()
 }
