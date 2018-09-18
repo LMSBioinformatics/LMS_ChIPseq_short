@@ -1,13 +1,16 @@
 ChIP-seq 
 ========================================================
-author:MRC CSC Bioinformatics Core
-date:http://mrccsc.github.io/ChIPseq_short/
+author:MRC LMS Bioinformatics Core
+date:https://github.com/LMSBioinformatics/LMS_ChIPseq_short
 width: 1440
 height: 1100
 autosize: true
 font-import: <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 font-family: 'Slabo 27px', serif;
 css:style.css
+```{r}
+
+```
 
 ChIP-seq introduction 
 ========================================================
@@ -23,7 +26,7 @@ In this course we will use a few of the packages from the comprehensive reposito
 
 We will cover some of the basics of quality control, working with peaks, motif identification and functional analysis. 
 
-For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://github.com/ThomasCarroll/chipseqcourseNew).
+For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://github.com/LMSBioinformatics/LMS_chipseqcourse).
 
 ========================================================
 
@@ -81,17 +84,17 @@ This data is composed of Myc chip for two cell lines, Mel and Ch12 cell lines, e
 
 Due to the short time we have together the data has been processed from unaligned reads to called peaks. 
 
-For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://github.com/ThomasCarroll/chipseqcourseNew/).
+For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://github.com/LMSBioinformatics/LMS_chipseqcourse/).
 
 Materials.
 ========================================================
 id: materials
 
 All material for this course can be found on github.
-* [ChIPseq_short](https://github.com/mrccsc/ChIPseq_short)
+* [ChIPseq_short](https://github.com/LMSBioinformatics/LMS_ChIPseq_short)
 
 Or can be downloaded as a zip archive from here. 
-* [Download zip](https://github.com/mrccsc/ChIPseq_short/archive/master.zip)
+* [Download zip](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/archive/master.zip)
 
 Materials. - Presentations, source code and practicals.
 ========================================================
@@ -279,17 +282,17 @@ Quality Control (Assessing fragment length)
 Quality Control (Assessing fragment length)
 ========================================================
 <div align="center">
-<img src="shifts.gif" alt="offset" height="300" width="1400">
+<img src="imgs/shifts.gif" alt="offset" height="300" width="1400">
 </div>
 <div align="center">
-<img src="cor.gif" alt="offset" height="600" width="1400">
+<img src="imgs/cor.gif" alt="offset" height="600" width="1400">
 </div>
 
 
 Quality Control (Assessing fragment length)
 ========================================================
 <div align="center">
-<img src="imgs/shifts.jpg" alt="offset" height="900" width="1300">
+<img src="imgs/shifts.gif" alt="offset" height="900" width="1300">
 </div>
 
 
@@ -381,7 +384,7 @@ id: peakpushing
 
 Macs2 is a frequently used peak caller and works well to identify both punctate and broad peaks.
 
-For more details on peak calling steps for data in this course you can visit our [material](https://github.com/ThomasCarroll/chipseqcourseNew/blob/master/Precticals_pres/peakCallingForMyc).
+For more details on peak calling steps for data in this course you can visit our [material](https://github.com/LMSBioinformatics/LMS_chipseqcourse/blob/master/Precticals_pres/peakCallingForMyc).
 
 For more details on MACS2, see the github page for MACS2 software
 * [MACS2 github page](https://github.com/taoliu/MACS).
@@ -628,14 +631,14 @@ length(commonPeaks)
 Time for a exercise.
 =========================================================
 
-Exercise on "Working with peaks" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
+Exercise on "Working with peaks" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Working with peaks" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
+Answers on "Working with peaks" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
 
-Rcode for "Working with peaks" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/WorkingWithPeaks.R).
+Rcode for "Working with peaks" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks.R).
 
 
 Time to install a package.
@@ -914,9 +917,9 @@ Exercise on "Functional Annotation of peaks" can be found [here](http://mrccsc.g
 Time for a solution.
 =========================================================
 
-Answers on "Functional Annotation of peaks" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks_Solutions.html).
+Answers on "Functional Annotation of peaks" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/FunctionalAnnotationOfPeaks_Solutions.html).
 
-Rcode for "Functional Annotation of peaks" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks.R).
+Rcode for "Functional Annotation of peaks" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/FunctionalAnnotationOfPeaks.R).
 
 Identifying Motifs
 ==========================================================
@@ -992,14 +995,14 @@ Results files from Meme-ChIP can be found [here](http://mrccsc.github.io/myc_Mem
 
 Time for an exercise
 =========================================================
-Exercise on "Identifying Motifs" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Exercises.html).
+Exercise on "Identifying Motifs" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Identifying Motifs" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Solutions.html).
+Answers on "Identifying Motifs" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs_Solutions.html).
 
-Rcode for "Identifying Motifs" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/IdentifingMotifs.R).
+Rcode for "Identifying Motifs" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs.R).
 
 
 Getting hold of Data
@@ -1041,7 +1044,7 @@ id: vis
 Having produced our consensus sets or GRanges of any description it is useful to visualise this in a genome browser. 
 
 One fast, locally installed browser is the Broad's Integrative Genome Browser (IGV).
-IGV is available from [BROAD](http://www.broadinstitute.org/software/igv/download) and our quick course in IGV is available [here](http://mrccsc.github.io/IGV_course/).
+IGV is available from [BROAD](http://www.broadinstitute.org/software/igv/download) and our quick course in IGV is available [here](https://github.com/LMSBioinformatics/LMS_IGV_course/).
 
 To export GRanges from R into a ".bed" format acceptable to IGV (or other browser types) we can use the export.bed function from rtracklayer.
 
@@ -1053,7 +1056,7 @@ export.bed(commonPeaks,con = "consensusPeaksForIGV.bed")
 
 Time for an exercise
 =========================================================
-Exercise on "External Data and Visualisation" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Exercises.html).
+Exercise on "External Data and Visualisation" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation_Exercises.html).
 
 Installing a package to a personal directory.
 =========================================================
@@ -1081,9 +1084,9 @@ library(BSgenome.Mmusculus.UCSC.mm10, lib.loc="C:/Users/tcarroll/MYUSERNAME/Rlib
 Time for a solution.
 =========================================================
 
-Answers on "External Data and Visualisation" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Solutions.html).
+Answers on "External Data and Visualisation" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation_Solutions.html).
 
-Rcode for "External Data and Visualisation" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation.R).
+Rcode for "External Data and Visualisation" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation.R).
 
 
 Working with complex overlaps

@@ -1,13 +1,14 @@
 ChIP-seq 
 ========================================================
-author:MRC CSC Bioinformatics Core
-date:http://mrccsc.github.io/ChIPseq_short/
+author:MRC LMS Bioinformatics Core
+date:https://github.com/LMSBioinformatics/LMS_ChIPseq_short
 width: 1440
 height: 1100
 autosize: true
 font-import: <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 font-family: 'Slabo 27px', serif;
 css:style.css
+
 
 ChIP-seq introduction 
 ========================================================
@@ -23,7 +24,7 @@ In this course we will use a few of the packages from the comprehensive reposito
 
 We will cover some of the basics of quality control, working with peaks, motif identification and functional analysis. 
 
-For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://github.com/ThomasCarroll/chipseqcourseNew).
+For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://github.com/LMSBioinformatics/LMS_chipseqcourse).
 
 ========================================================
 
@@ -81,17 +82,17 @@ This data is composed of Myc chip for two cell lines, Mel and Ch12 cell lines, e
 
 Due to the short time we have together the data has been processed from unaligned reads to called peaks. 
 
-For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://github.com/ThomasCarroll/chipseqcourseNew/).
+For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://github.com/LMSBioinformatics/LMS_chipseqcourse/).
 
 Materials.
 ========================================================
 id: materials
 
 All material for this course can be found on github.
-* [ChIPseq_short](https://github.com/mrccsc/ChIPseq_short)
+* [ChIPseq_short](https://github.com/LMSBioinformatics/LMS_ChIPseq_short)
 
 Or can be downloaded as a zip archive from here. 
-* [Download zip](https://github.com/mrccsc/ChIPseq_short/archive/master.zip)
+* [Download zip](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/archive/master.zip)
 
 Materials. - Presentations, source code and practicals.
 ========================================================
@@ -253,7 +254,7 @@ myc_ch12_1 myc_ch12_2  myc_Mel_1  myc_Mel_2       ch12        MEL
 plotFrip(res)
 ```
 
-![plot of chunk unnamed-chunk-5](ChIPseq-figure/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-6](ChIPseq-figure/unnamed-chunk-6-1.png)
 
 
 Quality Control (Assessing fragment length)
@@ -297,17 +298,17 @@ Quality Control (Assessing fragment length)
 Quality Control (Assessing fragment length)
 ========================================================
 <div align="center">
-<img src="shifts.gif" alt="offset" height="300" width="1400">
+<img src="imgs/shifts.gif" alt="offset" height="300" width="1400">
 </div>
 <div align="center">
-<img src="cor.gif" alt="offset" height="600" width="1400">
+<img src="imgs/cor.gif" alt="offset" height="600" width="1400">
 </div>
 
 
 Quality Control (Assessing fragment length)
 ========================================================
 <div align="center">
-<img src="imgs/shifts.jpg" alt="offset" height="900" width="1300">
+<img src="imgs/shifts.gif" alt="offset" height="900" width="1300">
 </div>
 
 
@@ -322,7 +323,7 @@ ccplot$layers <- ccplot$layers[1]
 ccplot
 ```
 
-![plot of chunk unnamed-chunk-6](ChIPseq-figure/unnamed-chunk-6-1.png)
+![plot of chunk unnamed-chunk-7](ChIPseq-figure/unnamed-chunk-7-1.png)
 
 
 Quality Control - Blacklists and SSD.
@@ -377,7 +378,7 @@ Higher scores for pre-blacklisted SSD can suggest a strong background signal in 
 plotSSD(res)+xlim(0,14)
 ```
 
-![plot of chunk unnamed-chunk-7](ChIPseq-figure/unnamed-chunk-7-1.png)
+![plot of chunk unnamed-chunk-8](ChIPseq-figure/unnamed-chunk-8-1.png)
 
 Quality Control - Standardised Standard Deviation.
 ========================================================
@@ -391,7 +392,7 @@ Higher post-blacklisted SSD scores reflect samples with stronger peak signal.
 plotSSD(res)+xlim(0.2,0.4)
 ```
 
-![plot of chunk unnamed-chunk-8](ChIPseq-figure/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-9](ChIPseq-figure/unnamed-chunk-9-1.png)
 
 Quality Control 
 ========================================================
@@ -408,7 +409,7 @@ id: peakpushing
 
 Macs2 is a frequently used peak caller and works well to identify both punctate and broad peaks.
 
-For more details on peak calling steps for data in this course you can visit our [material](https://github.com/ThomasCarroll/chipseqcourseNew/blob/master/Precticals_pres/peakCallingForMyc).
+For more details on peak calling steps for data in this course you can visit our [material](https://github.com/LMSBioinformatics/LMS_chipseqcourse/blob/master/Precticals_pres/peakCallingForMyc).
 
 For more details on MACS2, see the github page for MACS2 software
 * [MACS2 github page](https://github.com/taoliu/MACS).
@@ -863,14 +864,14 @@ length(commonPeaks)
 Time for a exercise.
 =========================================================
 
-Exercise on "Working with peaks" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
+Exercise on "Working with peaks" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Working with peaks" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
+Answers on "Working with peaks" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
 
-Rcode for "Working with peaks" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/WorkingWithPeaks.R).
+Rcode for "Working with peaks" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks.R).
 
 
 Time to install a package.
@@ -970,13 +971,13 @@ peakAnno <- annotatePeak(commonPeaks, tssRegion = c(-1000, 1000), TxDb = TxDb.Mm
 ```
 
 ```
->> preparing features information...		 2016-11-27 20:58:59 
->> identifying nearest features...		 2016-11-27 20:59:00 
->> calculating distance from peak to TSS...	 2016-11-27 20:59:01 
->> assigning genomic annotation...		 2016-11-27 20:59:01 
->> adding gene annotation...			 2016-11-27 20:59:14 
->> assigning chromosome lengths			 2016-11-27 20:59:24 
->> done...					 2016-11-27 20:59:24 
+>> preparing features information...		 2018-09-18 11:39:20 
+>> identifying nearest features...		 2018-09-18 11:39:21 
+>> calculating distance from peak to TSS...	 2018-09-18 11:39:22 
+>> assigning genomic annotation...		 2018-09-18 11:39:22 
+>> adding gene annotation...			 2018-09-18 11:39:36 
+>> assigning chromosome lengths			 2018-09-18 11:39:36 
+>> done...					 2018-09-18 11:39:36 
 ```
 
 Peak annotation
@@ -1009,8 +1010,8 @@ Genomic Annotation Summary:
 3             3' UTR  1.7152092
 1           1st Exon  0.5252139
 7         Other Exon  3.1476108
-2         1st Intron  7.4117604
-8       Other Intron 24.9201161
+2         1st Intron 12.5573879
+8       Other Intron 19.7744886
 6 Downstream (<=3kb)  1.5242223
 5  Distal Intergenic 30.8076542
 ```
@@ -1067,7 +1068,7 @@ Now we have the annotated peaks from ChIPseeker we can use some of ChIPseeker's 
 plotAnnoBar(peakAnno)
 ```
 
-![plot of chunk unnamed-chunk-30](ChIPseq-figure/unnamed-chunk-30-1.png)
+![plot of chunk unnamed-chunk-31](ChIPseq-figure/unnamed-chunk-31-1.png)
 
 Visualising peak annotation
 =========================================================
@@ -1079,7 +1080,7 @@ Similarly we can plot the distribution of peaks around TSS sites.
 plotDistToTSS(peakAnno)
 ```
 
-![plot of chunk unnamed-chunk-31](ChIPseq-figure/unnamed-chunk-31-1.png)
+![plot of chunk unnamed-chunk-32](ChIPseq-figure/unnamed-chunk-32-1.png)
 
 Visualising peak annotation
 =========================================================
@@ -1091,7 +1092,7 @@ ChIPseeker can also offer a succinct plot to describe the overlap between annota
 upsetplot(peakAnno, vennpie = F)
 ```
 
-![plot of chunk unnamed-chunk-32](ChIPseq-figure/unnamed-chunk-32-1.png)
+![plot of chunk unnamed-chunk-33](ChIPseq-figure/unnamed-chunk-33-1.png)
 
 
 Gene Ontology and geneset testing.
@@ -1302,21 +1303,21 @@ great_ResultTable[["MSigDB Predicted Promoter Motifs"]][1:4, ]
 2              1.248896                0.26193450     2.159491e-94
 3              1.365651                0.12389840     7.049248e-74
 4              1.354055                0.10696970     5.042655e-60
-  Hyper_Total_Genes Hyper_Expected Hyper_Observed_Gene_Hits
-1              1068       702.2493                      945
-2              2680      1762.1990                     2173
-3               984       647.0162                      785
-4               940       618.0846                      802
+  Binom_Adjp_BH Hyper_Total_Genes Hyper_Expected Hyper_Observed_Gene_Hits
+1  9.656361e-99              1068       702.2493                      945
+2  6.640435e-92              2680      1762.1990                     2173
+3  1.445096e-71               984       647.0162                      785
+4  7.753082e-58               940       618.0846                      802
   Hyper_Fold_Enrichment Hyper_Gene_Set_Coverage Hyper_Term_Gene_Coverage
 1              1.345676              0.06786843                0.8848315
 2              1.233119              0.15606150                0.8108209
 3              1.213262              0.05637748                0.7977642
 4              1.297557              0.05759839                0.8531915
-  Hyper_Raw_PValue
-1     1.824101e-68
-2     5.650988e-78
-3     3.127749e-23
-4     1.477682e-43
+  Hyper_Raw_PValue Hyper_Adjp_BH
+1     1.824101e-68  5.609111e-66
+2     5.650988e-78  3.475358e-75
+3     3.127749e-23  1.282377e-21
+4     1.477682e-43  3.029248e-41
 ```
 
 Time for an exercise
@@ -1326,9 +1327,9 @@ Exercise on "Functional Annotation of peaks" can be found [here](http://mrccsc.g
 Time for a solution.
 =========================================================
 
-Answers on "Functional Annotation of peaks" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks_Solutions.html).
+Answers on "Functional Annotation of peaks" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/FunctionalAnnotationOfPeaks_Solutions.html).
 
-Rcode for "Functional Annotation of peaks" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks.R).
+Rcode for "Functional Annotation of peaks" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/FunctionalAnnotationOfPeaks.R).
 
 Identifying Motifs
 ==========================================================
@@ -1425,14 +1426,14 @@ Results files from Meme-ChIP can be found [here](http://mrccsc.github.io/myc_Mem
 
 Time for an exercise
 =========================================================
-Exercise on "Identifying Motifs" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Exercises.html).
+Exercise on "Identifying Motifs" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Identifying Motifs" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Solutions.html).
+Answers on "Identifying Motifs" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs_Solutions.html).
 
-Rcode for "Identifying Motifs" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/IdentifingMotifs.R).
+Rcode for "Identifying Motifs" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs.R).
 
 
 Getting hold of Data
@@ -1466,21 +1467,22 @@ query(ah, c("Myc","BED", "Mus Musculus"))
 
 ```
 AnnotationHub with 1 record
-# snapshotDate(): 2016-03-09 
+# snapshotDate(): 2017-10-27 
 # names(): AH28051
 # $dataprovider: Haemcode
 # $species: Mus musculus
 # $rdataclass: GRanges
+# $rdatadateadded: 2015-03-12
 # $title: c-Myc_GSM912934_MEL.bed
 # $description: peak file from Haemcode
 # $taxonomyid: 10090
 # $genome: mm10
 # $sourcetype: BED
 # $sourceurl: http://haemcode.stemcells.cam.ac.uk/blood/Peaks/mm10/c-My...
-# $sourcelastmodifieddate: 2013-06-03
 # $sourcesize: 303496
-# $tags: c-Myc_GSM912934_MEL, Mouse ErythroLeukaemic, [CL] MEL,
-#   BTO:0004475, Myc, 17869, GSE36030, GSM912934, tf 
+# $tags: c("c-Myc_GSM912934_MEL", "Mouse ErythroLeukaemic", "[CL]
+#   MEL", "BTO:0004475", "Myc", "17869", "GSE36030", "GSM912934",
+#   "tf") 
 # retrieve record with 'object[["AH28051"]]' 
 ```
 
@@ -1507,7 +1509,7 @@ id: vis
 Having produced our consensus sets or GRanges of any description it is useful to visualise this in a genome browser. 
 
 One fast, locally installed browser is the Broad's Integrative Genome Browser (IGV).
-IGV is available from [BROAD](http://www.broadinstitute.org/software/igv/download) and our quick course in IGV is available [here](http://mrccsc.github.io/IGV_course/).
+IGV is available from [BROAD](http://www.broadinstitute.org/software/igv/download) and our quick course in IGV is available [here](https://github.com/LMSBioinformatics/LMS_IGV_course/).
 
 To export GRanges from R into a ".bed" format acceptable to IGV (or other browser types) we can use the export.bed function from rtracklayer.
 
@@ -1519,7 +1521,7 @@ export.bed(commonPeaks,con = "consensusPeaksForIGV.bed")
 
 Time for an exercise
 =========================================================
-Exercise on "External Data and Visualisation" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Exercises.html).
+Exercise on "External Data and Visualisation" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation_Exercises.html).
 
 Installing a package to a personal directory.
 =========================================================
@@ -1548,9 +1550,9 @@ library(BSgenome.Mmusculus.UCSC.mm10, lib.loc="C:/Users/tcarroll/MYUSERNAME/Rlib
 Time for a solution.
 =========================================================
 
-Answers on "External Data and Visualisation" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Solutions.html).
+Answers on "External Data and Visualisation" can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation_Solutions.html).
 
-Rcode for "External Data and Visualisation" solutions can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation.R).
+Rcode for "External Data and Visualisation" solutions can be found [here](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation.R).
 
 
 Working with complex overlaps
@@ -1643,7 +1645,7 @@ Or we can view as VennDiagram
 vennDiagram(as.data.frame(elementMetadata(flattenedPeaks)))
 ```
 
-![plot of chunk unnamed-chunk-53](ChIPseq-figure/unnamed-chunk-53-1.png)
+![plot of chunk unnamed-chunk-54](ChIPseq-figure/unnamed-chunk-54-1.png)
 
 We can check the Venn to see our numbers add up
 
@@ -1736,7 +1738,7 @@ boxplot(width(highConfidence_Only))
 abline(h=400,col="red")
 ```
 
-![plot of chunk unnamed-chunk-57](ChIPseq-figure/unnamed-chunk-57-1.png)
+![plot of chunk unnamed-chunk-58](ChIPseq-figure/unnamed-chunk-58-1.png)
 
 The majority of peaks are around 400 so we will resize all peaks to this for ease here
 
@@ -1832,7 +1834,7 @@ UpinMel
 ```
 
 ```
-GRanges object with 14665 ranges and 6 metadata columns:
+GRanges object with 14634 ranges and 6 metadata columns:
                                 seqnames                 ranges strand |
                                    <Rle>              <IRanges>  <Rle> |
           ID1-1;4661451-4661850        1     [4661451, 4661850]      * |
@@ -1848,43 +1850,43 @@ GRanges object with 14665 ranges and 6 metadata columns:
         ID45889-Y;307700-308099        Y [   307700,    308099]      * |
                                         baseMean   log2FoldChange
                                        <numeric>        <numeric>
-          ID1-1;4661451-4661850 33.4987258065535 6.51437413413873
-          ID4-1;5015863-5016262  11.492741487773 3.71651993004389
-          ID6-1;5210772-5211171 12.5818260145118 4.33655421150083
-          ID7-1;5273188-5273587 15.8972913963059 4.21678781335758
-          ID9-1;6252315-6252714 24.4950641604032 5.34088182626826
+          ID1-1;4661451-4661850 33.4987258065535 7.22030034960451
+          ID4-1;5015863-5016262  11.492741487773 4.01128352565275
+          ID6-1;5210772-5211171 12.5818260145118 4.75172716464463
+          ID7-1;5273188-5273587 15.8972913963059 4.50076913801068
+          ID9-1;6252315-6252714 24.4950641604032 5.73897203646504
                             ...              ...              ...
-  ID45884-X;166410701-166411100 73.6663018288351 4.32278172136027
-  ID45885-X;166417005-166417404 108.464233028677 3.13024431036311
-  ID45886-X;166428102-166428501 89.0604007646183 2.81566635071844
-  ID45887-X;166434992-166435391 48.2298270233863 5.87635650497215
-        ID45889-Y;307700-308099 28.8586281179605 6.30308446332979
+  ID45884-X;166410701-166411100 73.6663018288351 4.38898223421337
+  ID45885-X;166417005-166417404 108.464233028677  3.1562472975691
+  ID45886-X;166428102-166428501 89.0604007646183 2.84317413171437
+  ID45887-X;166434992-166435391 48.2298270233863 6.15382642641262
+        ID45889-Y;307700-308099 28.8586281179605 7.00076406049423
                                             lfcSE             stat
                                         <numeric>        <numeric>
-          ID1-1;4661451-4661850  1.16968145706261   5.569357447538
-          ID4-1;5015863-5016262  1.09452097123695 3.39556758409457
-          ID6-1;5210772-5211171  1.16914309876601 3.70917316800477
-          ID7-1;5273188-5273587  1.01609971312074 4.14997441580472
-          ID9-1;6252315-6252714   1.0422219579297 5.12451477886488
+          ID1-1;4661451-4661850  1.53570079275314 4.70163223440177
+          ID4-1;5015863-5016262  1.21771766444253 3.29409980883304
+          ID6-1;5210772-5211171   1.3514334824072 3.51606440605628
+          ID7-1;5273188-5273587  1.12528722311095 3.99966252666401
+          ID9-1;6252315-6252714  1.20609280172064  4.7583171280665
                             ...               ...              ...
-  ID45884-X;166410701-166411100 0.517937427666784 8.34614663943795
-  ID45885-X;166417005-166417404 0.385662406096218 8.11653990869453
-  ID45886-X;166428102-166428501 0.418027479737241 6.73560109610085
-  ID45887-X;166434992-166435391 0.859196070844479 6.83936612884699
-        ID45889-Y;307700-308099  1.18505982147249 5.31879011432345
+  ID45884-X;166410701-166411100 0.530587121468228 8.27193510100337
+  ID45885-X;166417005-166417404 0.389901619788316 8.09498380458814
+  ID45886-X;166428102-166428501 0.423252797994428 6.71743729796157
+  ID45887-X;166434992-166435391 0.955054840569181 6.44342729339516
+        ID45889-Y;307700-308099  1.54835483621992 4.52142099261016
                                               pvalue                 padj
                                            <numeric>            <numeric>
-          ID1-1;4661451-4661850 2.55680476208758e-08  2.8472915346208e-07
-          ID4-1;5015863-5016262 0.000684864635003163  0.00174097423306737
-          ID6-1;5210772-5211171 0.000207937181052746 0.000613044655844316
-          ID7-1;5273188-5273587 3.32512438085574e-05 0.000124416313156324
-          ID9-1;6252315-6252714 2.98304952141084e-07 2.25979050241972e-06
+          ID1-1;4661451-4661850  2.5809003788325e-06 1.60230898519184e-05
+          ID4-1;5015863-5016262 0.000987374317277225  0.00246438147432895
+          ID6-1;5210772-5211171 0.000437994719805687  0.00122013194617716
+          ID7-1;5273188-5273587 6.34328729242169e-05 0.000233389032649576
+          ID9-1;6252315-6252714 1.95213635239289e-06 1.26876421872277e-05
                             ...                  ...                  ...
-  ID45884-X;166410701-166411100 7.05262329856537e-17  1.0020402118197e-14
-  ID45885-X;166417005-166417404 4.79663030789973e-16 5.62984547545101e-14
-  ID45886-X;166428102-166428501 1.63253606730215e-11 5.35145322861645e-10
-  ID45887-X;166434992-166435391 7.95443517031384e-12 2.83640201115806e-10
-        ID45889-Y;307700-308099 1.04459552554234e-07 9.35569435171527e-07
+  ID45884-X;166410701-166411100 1.31802047054498e-16 2.07857716268901e-14
+  ID45885-X;166417005-166417404 5.72719715177129e-16 7.66275602592094e-14
+  ID45886-X;166428102-166428501 1.84948306522728e-11 7.06436833838362e-10
+  ID45887-X;166434992-166435391 1.16805238801522e-10 3.58077890386069e-09
+        ID45889-Y;307700-308099 6.14258863606959e-06 3.29934079689262e-05
   -------
   seqinfo: 22 sequences from an unspecified genome; no seqlengths
 ```
@@ -1898,150 +1900,183 @@ sessionInfo()
 ```
 
 ```
-R version 3.3.0 (2016-05-03)
-Platform: x86_64-apple-darwin13.4.0 (64-bit)
-Running under: OS X 10.11.6 (El Capitan)
+R version 3.4.3 (2017-11-30)
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+Running under: macOS High Sierra 10.13.2
+
+Matrix products: default
+BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
 
 locale:
 [1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
 
 attached base packages:
-[1] stats4    parallel  stats     graphics  grDevices utils     datasets 
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
 [8] methods   base     
 
 other attached packages:
- [1] limma_3.28.21                          
+ [1] limma_3.34.9                           
  [2] BSgenome.Mmusculus.UCSC.mm9_1.4.0      
- [3] BSgenome_1.40.1                        
- [4] rtracklayer_1.32.2                     
- [5] Biostrings_2.40.2                      
- [6] XVector_0.12.1                         
- [7] rGREAT_1.4.2                           
- [8] goseq_1.24.0                           
- [9] geneLenDataBase_1.8.0                  
+ [3] BSgenome_1.46.0                        
+ [4] rtracklayer_1.38.3                     
+ [5] Biostrings_2.46.0                      
+ [6] XVector_0.18.0                         
+ [7] rGREAT_1.11.1                          
+ [8] goseq_1.30.0                           
+ [9] geneLenDataBase_1.14.0                 
 [10] BiasedUrn_1.07                         
 [11] KEGG.db_3.2.3                          
-[12] ChIPseeker_1.8.9                       
-[13] org.Mm.eg.db_3.3.0                     
-[14] TxDb.Mmusculus.UCSC.mm9.knownGene_3.2.2
-[15] GenomicFeatures_1.24.5                 
-[16] AnnotationDbi_1.34.4                   
-[17] DESeq2_1.12.4                          
-[18] ChIPQC_1.10.1                          
-[19] DiffBind_2.2.3                         
-[20] SummarizedExperiment_1.2.3             
-[21] Biobase_2.32.0                         
-[22] GenomicRanges_1.24.3                   
-[23] GenomeInfoDb_1.8.7                     
-[24] IRanges_2.6.1                          
-[25] S4Vectors_0.10.3                       
-[26] BiocGenerics_0.18.0                    
-[27] ggplot2_2.1.0                          
-[28] knitr_1.14                             
+[12] bindrcpp_0.2.2                         
+[13] ChIPseeker_1.14.2                      
+[14] org.Mm.eg.db_3.5.0                     
+[15] TxDb.Mmusculus.UCSC.mm9.knownGene_3.2.2
+[16] GenomicFeatures_1.30.3                 
+[17] AnnotationDbi_1.40.0                   
+[18] DESeq2_1.18.1                          
+[19] ChIPQC_1.14.0                          
+[20] DiffBind_2.6.6                         
+[21] SummarizedExperiment_1.8.1             
+[22] DelayedArray_0.4.1                     
+[23] matrixStats_0.54.0                     
+[24] Biobase_2.38.0                         
+[25] GenomicRanges_1.30.3                   
+[26] GenomeInfoDb_1.14.0                    
+[27] IRanges_2.12.0                         
+[28] S4Vectors_0.16.0                       
+[29] BiocGenerics_0.24.0                    
+[30] ggplot2_3.0.0                          
+[31] knitr_1.20                             
 
 loaded via a namespace (and not attached):
-  [1] amap_0.8-14                              
-  [2] colorspace_1.2-6                         
-  [3] rjson_0.2.15                             
-  [4] hwriter_1.3.2                            
-  [5] qvalue_2.4.2                             
-  [6] GlobalOptions_0.0.10                     
-  [7] base64enc_0.1-3                          
-  [8] splines_3.3.0                            
-  [9] fail_1.3                                 
- [10] TxDb.Rnorvegicus.UCSC.rn4.ensGene_3.2.2  
- [11] GOSemSim_1.30.3                          
- [12] geneplotter_1.50.0                       
- [13] Formula_1.2-1                            
- [14] Nozzle.R1_1.1-1                          
- [15] Rsamtools_1.24.0                         
- [16] gridBase_0.4-7                           
- [17] annotate_1.50.0                          
- [18] cluster_2.0.4                            
- [19] GO.db_3.3.0                              
- [20] pheatmap_1.0.8                           
- [21] graph_1.50.0                             
- [22] TxDb.Hsapiens.UCSC.hg18.knownGene_3.2.2  
- [23] GOstats_2.38.1                           
- [24] backports_1.0.3                          
- [25] lazyeval_0.2.0                           
- [26] assertthat_0.1                           
- [27] Matrix_1.2-7.1                           
- [28] TxDb.Hsapiens.UCSC.hg19.knownGene_3.2.2  
- [29] formatR_1.4                              
- [30] acepack_1.3-3.3                          
- [31] tools_3.3.0                              
- [32] igraph_1.0.1                             
- [33] gtable_0.2.0                             
- [34] Category_2.38.0                          
- [35] reshape2_1.4.1                           
- [36] systemPipeR_1.6.4                        
- [37] DO.db_2.9                                
- [38] dplyr_0.5.0                              
- [39] ShortRead_1.30.0                         
- [40] Rcpp_0.12.7                              
- [41] TxDb.Dmelanogaster.UCSC.dm3.ensGene_3.2.2
- [42] TxDb.Hsapiens.UCSC.hg38.knownGene_3.1.3  
- [43] nlme_3.1-128                             
- [44] gdata_2.17.0                             
- [45] TxDb.Mmusculus.UCSC.mm10.knownGene_3.2.2 
- [46] stringr_1.1.0                            
- [47] gtools_3.5.0                             
- [48] XML_3.98-1.4                             
- [49] DOSE_2.10.7                              
- [50] edgeR_3.14.0                             
- [51] zlibbioc_1.18.0                          
- [52] scales_0.4.0                             
- [53] RBGL_1.48.1                              
- [54] RColorBrewer_1.1-2                       
- [55] BBmisc_1.10                              
- [56] gridExtra_2.2.1                          
- [57] UpSetR_1.2.4                             
- [58] biomaRt_2.28.0                           
- [59] rpart_4.1-10                             
- [60] latticeExtra_0.6-28                      
- [61] stringi_1.1.1                            
- [62] RSQLite_1.0.0                            
- [63] highr_0.6                                
- [64] genefilter_1.54.2                        
- [65] plotrix_3.6-3                            
- [66] checkmate_1.8.1                          
- [67] caTools_1.17.1                           
- [68] boot_1.3-18                              
- [69] BiocParallel_1.6.6                       
- [70] chipseq_1.22.0                           
- [71] chron_2.3-47                             
- [72] BatchJobs_1.6                            
- [73] bitops_1.0-6                             
- [74] evaluate_0.10                            
- [75] lattice_0.20-34                          
- [76] TxDb.Celegans.UCSC.ce6.ensGene_3.2.2     
- [77] GenomicAlignments_1.8.4                  
- [78] labeling_0.3                             
- [79] GSEABase_1.34.0                          
- [80] AnnotationForge_1.14.2                   
- [81] plyr_1.8.4                               
- [82] magrittr_1.5                             
- [83] sendmailR_1.2-1                          
- [84] R6_2.1.3                                 
- [85] gplots_3.0.1                             
- [86] Hmisc_3.17-4                             
- [87] DBI_0.5-1                                
- [88] mgcv_1.8-14                              
- [89] foreign_0.8-66                           
- [90] survival_2.39-5                          
- [91] RCurl_1.95-4.8                           
- [92] nnet_7.3-12                              
- [93] tibble_1.2                               
- [94] KernSmooth_2.23-15                       
- [95] GetoptLong_0.1.5                         
- [96] locfit_1.5-9.1                           
- [97] grid_3.3.0                               
- [98] data.table_1.9.6                         
- [99] digest_0.6.10                            
-[100] xtable_1.8-2                             
-[101] brew_1.0-6                               
-[102] munsell_0.4.3                            
+  [1] backports_1.1.2                          
+  [2] GOstats_2.44.0                           
+  [3] fastmatch_1.1-0                          
+  [4] Hmisc_4.1-1                              
+  [5] igraph_1.2.2                             
+  [6] plyr_1.8.4                               
+  [7] lazyeval_0.2.1                           
+  [8] GSEABase_1.40.1                          
+  [9] splines_3.4.3                            
+ [10] BatchJobs_1.7                            
+ [11] BiocParallel_1.12.0                      
+ [12] gridBase_0.4-7                           
+ [13] amap_0.8-16                              
+ [14] digest_0.6.17                            
+ [15] GOSemSim_2.4.1                           
+ [16] htmltools_0.3.6                          
+ [17] GO.db_3.5.0                              
+ [18] gdata_2.18.0                             
+ [19] magrittr_1.5                             
+ [20] checkmate_1.8.5                          
+ [21] memoise_1.1.0                            
+ [22] BBmisc_1.11                              
+ [23] cluster_2.0.7-1                          
+ [24] annotate_1.56.2                          
+ [25] Nozzle.R1_1.1-1                          
+ [26] systemPipeR_1.12.0                       
+ [27] prettyunits_1.0.2                        
+ [28] colorspace_1.3-2                         
+ [29] blob_1.1.1                               
+ [30] ggrepel_0.8.0                            
+ [31] dplyr_0.7.6                              
+ [32] crayon_1.3.4                             
+ [33] RCurl_1.95-4.11                          
+ [34] TxDb.Hsapiens.UCSC.hg19.knownGene_3.2.2  
+ [35] graph_1.56.0                             
+ [36] chipseq_1.28.0                           
+ [37] genefilter_1.60.0                        
+ [38] bindr_0.1.1                              
+ [39] brew_1.0-6                               
+ [40] survival_2.42-6                          
+ [41] sendmailR_1.2-1                          
+ [42] glue_1.3.0                               
+ [43] gtable_0.2.0                             
+ [44] zlibbioc_1.24.0                          
+ [45] UpSetR_1.3.3                             
+ [46] GetoptLong_0.1.7                         
+ [47] Rgraphviz_2.22.0                         
+ [48] DOSE_3.4.0                               
+ [49] scales_1.0.0                             
+ [50] pheatmap_1.0.10                          
+ [51] DBI_1.0.0                                
+ [52] edgeR_3.20.9                             
+ [53] Rcpp_0.12.18                             
+ [54] plotrix_3.7-3                            
+ [55] xtable_1.8-3                             
+ [56] progress_1.2.0                           
+ [57] htmlTable_1.12                           
+ [58] foreign_0.8-71                           
+ [59] bit_1.1-14                               
+ [60] Formula_1.2-3                            
+ [61] AnnotationForge_1.20.0                   
+ [62] htmlwidgets_1.2                          
+ [63] httr_1.3.1                               
+ [64] fgsea_1.4.1                              
+ [65] gplots_3.0.1                             
+ [66] RColorBrewer_1.1-2                       
+ [67] acepack_1.4.1                            
+ [68] pkgconfig_2.0.2                          
+ [69] XML_3.98-1.16                            
+ [70] nnet_7.3-12                              
+ [71] locfit_1.5-9.1                           
+ [72] tidyselect_0.2.4                         
+ [73] labeling_0.3                             
+ [74] rlang_0.2.2                              
+ [75] reshape2_1.4.3                           
+ [76] munsell_0.5.0                            
+ [77] tools_3.4.3                              
+ [78] RSQLite_2.1.1                            
+ [79] evaluate_0.11                            
+ [80] stringr_1.3.1                            
+ [81] bit64_0.9-7                              
+ [82] caTools_1.17.1.1                         
+ [83] purrr_0.2.5                              
+ [84] nlme_3.1-137                             
+ [85] RBGL_1.54.0                              
+ [86] formatR_1.5                              
+ [87] TxDb.Rnorvegicus.UCSC.rn4.ensGene_3.2.2  
+ [88] DO.db_2.9                                
+ [89] biomaRt_2.34.2                           
+ [90] compiler_3.4.3                           
+ [91] rstudioapi_0.7                           
+ [92] tibble_1.4.2                             
+ [93] geneplotter_1.56.0                       
+ [94] stringi_1.2.4                            
+ [95] highr_0.7                                
+ [96] TxDb.Hsapiens.UCSC.hg18.knownGene_3.2.2  
+ [97] lattice_0.20-35                          
+ [98] Matrix_1.2-14                            
+ [99] pillar_1.3.0                             
+[100] GlobalOptions_0.1.0                      
+[101] data.table_1.11.4                        
+[102] bitops_1.0-6                             
+[103] TxDb.Mmusculus.UCSC.mm10.knownGene_3.4.0 
+[104] qvalue_2.10.0                            
+[105] TxDb.Celegans.UCSC.ce6.ensGene_3.2.2     
+[106] R6_2.2.2                                 
+[107] latticeExtra_0.6-28                      
+[108] hwriter_1.3.2                            
+[109] RMySQL_0.10.15                           
+[110] ShortRead_1.36.1                         
+[111] KernSmooth_2.23-15                       
+[112] gridExtra_2.3                            
+[113] boot_1.3-20                              
+[114] gtools_3.8.1                             
+[115] assertthat_0.2.0                         
+[116] Category_2.44.0                          
+[117] rjson_0.2.20                             
+[118] withr_2.1.2                              
+[119] GenomicAlignments_1.14.2                 
+[120] Rsamtools_1.30.0                         
+[121] GenomeInfoDbData_1.0.0                   
+[122] mgcv_1.8-24                              
+[123] hms_0.4.2                                
+[124] grid_3.4.3                               
+[125] rpart_4.1-13                             
+[126] TxDb.Dmelanogaster.UCSC.dm3.ensGene_3.2.2
+[127] rvcheck_0.1.0                            
+[128] base64enc_0.1-3                          
 ```
 
 THE END!
