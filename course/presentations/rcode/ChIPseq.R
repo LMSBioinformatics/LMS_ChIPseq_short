@@ -1,5 +1,5 @@
 ## ----eval=F--------------------------------------------------------------
-## setwd("/PathToMyDownload/ChIPseq_short/course")
+setwd("C:/Users/mkari10/Desktop/R-course")
 ## # e.g. setwd("~/Downloads/ChIPseq_short/course")
 
 ## ----eval=F--------------------------------------------------------------
@@ -9,14 +9,14 @@
 ##                          blacklist = "/pathTo/mm9_Blacklist.bed")
 
 ## ----eval=F,echo=T-------------------------------------------------------
-## library(ChIPQC)
-## load("data/robjects/ChIPQCwithPeaks.RData")
-## QCmetrics(res)
+library(ChIPQC)
+load("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/robjects/ChIPQCwithPeaks.RData")
+QCmetrics(res)
 
 ## ----eval=T,echo=F-------------------------------------------------------
-library(ChIPQC)
-load("data/robjects/ChIPQCwithPeaks.RData")
-knitr:::kable(QCmetrics(res))
+# library(ChIPQC)
+# load("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/robjects/ChIPQCwithPeaks.RData")
+# knitr:::kable(QCmetrics(res))
 
 ## ----fig.height=5, fig.width=15------------------------------------------
 frip(res)
@@ -34,16 +34,16 @@ plotSSD(res)+xlim(0,14)
 plotSSD(res)+xlim(0.2,0.4)
 
 ## ----eval=T,echo=F,  warning=FALSE,collapse=T----------------------------
-macsPeaksFiles <- dir("data/MacsPeaks/", full.names=T)
+macsPeaksFiles <- dir("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks/", full.names=T)
 macsPeaks_DF <- read.delim(macsPeaksFiles[1],sep="",comment="#")
-knitr:::kable(macsPeaks_DF[1:3,])
+knitr:::kable(macsPeaks_DF[1:2,])
 
 ## ----eval=T,echo=F,  warning=FALSE,collapse=T----------------------------
 macsPeaks_DF <- read.delim(macsPeaksFiles[1],comment="",stringsAsFactors = F)
 macsPeaks_DF[1:6,]
 
 ## ----eval=T,echo=T, eval=T, echo=T, warning=FALSE------------------------
-peakfile <- "data/MacsPeaks/mycch12rep1_peaks.xls"
+peakfile <- "C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks/mycch12rep1_peaks.xls"
 macsPeaks_DF <- read.delim(peakfile,comment.char="#")
 macsPeaks_DF[1:2,]
 
@@ -81,13 +81,13 @@ library(ChIPQC)
 library(DESeq2)
 
 ## ----eval=T,echo=T, eval=T, echo=T, warning=FALSE------------------------
-peakfile <- "data/MacsPeaks/mycch12rep1_peaks.xls"
+peakfile <- "C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks/mycch12rep1_peaks.xls"
 singlePeakSet <- ChIPQC:::GetGRanges(peakfile, sep="\t", simple=F)
 singlePeakSet[1:2,]
 
 ## ----commonpeaks_1, eval=T, echo=T, warning=FALSE------------------------
-firstPeakSet <- ChIPQC:::GetGRanges("data/MacsPeaks//mycch12rep1_peaks.xls", sep="\t", simple=F)
-secondPeakSet <- ChIPQC:::GetGRanges("data/MacsPeaks//mycch12rep2_peaks.xls", sep="\t", simple=F)
+firstPeakSet <- ChIPQC:::GetGRanges("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks//mycch12rep1_peaks.xls", sep="\t", simple=F)
+secondPeakSet <- ChIPQC:::GetGRanges("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks//mycch12rep2_peaks.xls", sep="\t", simple=F)
 
 ## ----commonpeaks_2, eval=T, echo=T, warning=FALSE------------------------
 OnlyfirstPeakSet <- firstPeakSet[!firstPeakSet %over% secondPeakSet]
@@ -253,6 +253,7 @@ writeXStringSet(commonPeaksSequences,file="consensusPeaks.fa")
 ## ----eval=T,echo=F,cache=T-----------------------------------------------
 library(AnnotationHub)
 ah = AnnotationHub()
+rowResults <- display(ah)
 
 ## ----eval=F,echo=T,cache=T-----------------------------------------------
 ## library(AnnotationHub)
@@ -265,17 +266,15 @@ cmycAnnoHub <- ah[["AH28051"]]
 cmycAnnoHub[1:3,]
 
 ## ----eval=F,echo=T,cache=T-----------------------------------------------
-## library(rtracklayer)
-## export.bed(commonPeaks,con = "consensusPeaksForIGV.bed")
+library(rtracklayer)
+export.bed(commonPeaks,con = "consensusPeaksForIGV.bed")
 ## 
 
 ## ----eval=F,echo=T,cache=T-----------------------------------------------
 ## # Something like this
-## install.packages( "C:/Users/MYUSERNAME/Desktop/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz", lib="C:/Users/MYUSERNAME/Desktop/Rlibs", repos = NULL, type = "source"
-##                   )
+ install.packages( "C:/Users/mkari10/Desktop/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz", lib="C:/Users/mkari10/Desktop/Rlibs", repos = NULL, type = "source")
 ## 
-## library(BSgenome.Mmusculus.UCSC.mm10, lib.loc="C:/Users/tcarroll/MYUSERNAME/Rlibs"
-##         )
+ library(BSgenome.Mmusculus.UCSC.mm10, lib.loc="C:/Users/mkari10/Desktop/Rlibs")
 
 ## ---- echo=TRUE,collapse=F-----------------------------------------------
 listOfPeaks <- GRangesList(lapply(macsPeaksFiles,
@@ -334,16 +333,17 @@ PeaksToCount <- resize(highConfidence_Only,width = 400,fix = "center")
 PeaksToCount[1:2,]
 
 ## ---- echo=TRUE----------------------------------------------------------
-load("data/robjects/MycCounts.Rdata")
+load("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/robjects/MycCounts.Rdata")
 countTable[1:3,]
 
 ## ---- echo=TRUE----------------------------------------------------------
 library("DESeq2")
+countTable <- countTable[,-c(3,6)]
 
-colData <- data.frame(SampleName=colnames(countTable[,-c(3,6)]),
-                      CellLine=c("ch12","ch12","mel","mel"))
+colData <- data.frame(SampleName=paste0(colnames(countTable),c(1,2)), CellLine=c("ch12","ch12","mel","mel"))
 
-dds <- DESeqDataSetFromMatrix(countData = countTable[,-c(3,6)],
+colnames(countTable) <-  colData$SampleName
+dds <- DESeqDataSetFromMatrix(countData = countTable,
                               colData = colData,
                               design = ~ CellLine,
                               rowRanges=PeaksToCount)
