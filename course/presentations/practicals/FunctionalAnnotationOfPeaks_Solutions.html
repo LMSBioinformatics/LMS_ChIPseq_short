@@ -9,9 +9,9 @@
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="author" content="MRC CSC Bioinformatics Team" />
+<meta name="author" content="MRC LMS Bioinformatics Team" />
 
-<meta name="date" content="2016-02-22" />
+<meta name="date" content="2019-09-26" />
 
 <title>ChIP-seq Functional Annotation Of Peaks - practical</title>
 
@@ -110,8 +110,8 @@ $(document).ready(function () {
 
 
 <h1 class="title">ChIP-seq Functional Annotation Of Peaks - practical</h1>
-<h4 class="author"><em>MRC CSC Bioinformatics Team</em></h4>
-<h4 class="date"><em>22 February 2016</em></h4>
+<h4 class="author"><em>MRC LMS Bioinformatics Team</em></h4>
+<h4 class="date"><em>26 September 2019</em></h4>
 
 </div>
 
@@ -238,56 +238,6 @@ melRep1_GR_InRep1AndRep2
 ##   [30233]        14.59007
 ##   -------
 ##   seqinfo: 22 sequences from an unspecified genome; no seqlengths</code></pre>
-<ul>
-<li>Use this new peak set for enrichment testing using rGREAT package and retrieve results for MsigDB genesets.</li>
-</ul>
-<pre class="r"><code>library(rGREAT)</code></pre>
-<pre class="r"><code># Should already be in UCSC format..but just incase
-seqlevelsStyle(melRep1_GR_InRep1AndRep2) &lt;- &quot;UCSC&quot;
-
-great_Job &lt;- submitGreatJob(melRep1_GR_InRep1AndRep2,species=&quot;mm9&quot;)
-availableCategories(great_Job)
-## [1] &quot;GO&quot;                               &quot;Phenotype Data and Human Disease&quot;
-## [3] &quot;Pathway Data&quot;                     &quot;Gene Expression&quot;                 
-## [5] &quot;Regulatory Motifs&quot;                &quot;Gene Families&quot;
-
-great_ResultTable = getEnrichmentTables(great_Job,category=
-                          &quot;Pathway Data&quot;)
-names(great_ResultTable)
-## [1] &quot;PANTHER Pathway&quot; &quot;BioCyc Pathway&quot;  &quot;MSigDB Pathway&quot;
-msigdb_great_ResultTable &lt;- great_ResultTable[[&quot;MSigDB Pathway&quot;]]
-msigdb_great_ResultTable[1:4,]
-##                                ID                                     name
-## 1      REACTOME_METABOLISM_OF_RNA      Genes involved in Metabolism of RNA
-## 2     REACTOME_METABOLISM_OF_MRNA     Genes involved in Metabolism of mRNA
-## 3             REACTOME_CELL_CYCLE             Genes involved in Cell Cycle
-## 4 REACTOME_METABOLISM_OF_PROTEINS Genes involved in Metabolism of proteins
-##   Binom_Genome_Fraction Binom_Expected Binom_Observed_Region_Hits
-## 1           0.011585040       350.2506                        911
-## 2           0.009472405       286.3792                        774
-## 3           0.021584540       652.5655                       1295
-## 4           0.027092260       819.0804                       1474
-##   Binom_Fold_Enrichment Binom_Region_Set_Coverage Binom_Raw_PValue
-## 1              2.600995                0.03013264    2.354515e-139
-## 2              2.702710                0.02560116    1.523351e-126
-## 3              1.984475                0.04283399    7.100017e-112
-## 4              1.799579                0.04875467     3.039730e-97
-##   Hyper_Total_Genes Hyper_Expected Hyper_Observed_Gene_Hits
-## 1               246       162.6253                      237
-## 2               203       134.1990                      194
-## 3               376       248.5655                      356
-## 4               396       261.7871                      359
-##   Hyper_Fold_Enrichment Hyper_Gene_Set_Coverage Hyper_Term_Gene_Coverage
-## 1              1.457338              0.01692978                0.9634146
-## 2              1.445615              0.01385813                0.9556650
-## 3              1.432218              0.02543039                0.9468085
-## 4              1.371343              0.02564469                0.9065657
-##   Hyper_Raw_PValue
-## 1     6.972467e-32
-## 2     8.048409e-25
-## 3     1.049287e-41
-## 4     9.196031e-31</code></pre>
-
 
 
 
