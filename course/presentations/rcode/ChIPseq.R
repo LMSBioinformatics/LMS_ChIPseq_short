@@ -10,12 +10,12 @@ setwd("C:/Users/mkari10/Desktop/R-course")
 
 ## ----eval=F,echo=T-------------------------------------------------------
 library(ChIPQC)
-load("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/robjects/ChIPQCwithPeaks.RData")
+load("C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/robjects/ChIPQCwithPeaks.RData")
 QCmetrics(res)
 
 ## ----eval=T,echo=F-------------------------------------------------------
 # library(ChIPQC)
-# load("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/robjects/ChIPQCwithPeaks.RData")
+# load("C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/robjects/ChIPQCwithPeaks.RData")
 # knitr:::kable(QCmetrics(res))
 
 ## ----fig.height=5, fig.width=15------------------------------------------
@@ -34,7 +34,7 @@ plotSSD(res)+xlim(0,14)
 plotSSD(res)+xlim(0.2,0.4)
 
 ## ----eval=T,echo=F,  warning=FALSE,collapse=T----------------------------
-macsPeaksFiles <- dir("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks/", full.names=T)
+macsPeaksFiles <- dir("C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/MacsPeaks/", full.names=T)
 macsPeaks_DF <- read.delim(macsPeaksFiles[1],sep="",comment="#")
 knitr:::kable(macsPeaks_DF[1:2,])
 
@@ -43,7 +43,7 @@ macsPeaks_DF <- read.delim(macsPeaksFiles[1],comment="",stringsAsFactors = F)
 macsPeaks_DF[1:6,]
 
 ## ----eval=T,echo=T, eval=T, echo=T, warning=FALSE------------------------
-peakfile <- "C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks/mycch12rep1_peaks.xls"
+peakfile <- "C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/MacsPeaks/mycch12rep1_peaks.xls"
 macsPeaks_DF <- read.delim(peakfile,comment.char="#")
 macsPeaks_DF[1:2,]
 
@@ -81,13 +81,13 @@ library(ChIPQC)
 library(DESeq2)
 
 ## ----eval=T,echo=T, eval=T, echo=T, warning=FALSE------------------------
-peakfile <- "C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks/mycch12rep1_peaks.xls"
+peakfile <- "C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/MacsPeaks/mycch12rep1_peaks.xls"
 singlePeakSet <- ChIPQC:::GetGRanges(peakfile, sep="\t", simple=F)
 singlePeakSet[1:2,]
 
 ## ----commonpeaks_1, eval=T, echo=T, warning=FALSE------------------------
-firstPeakSet <- ChIPQC:::GetGRanges("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks//mycch12rep1_peaks.xls", sep="\t", simple=F)
-secondPeakSet <- ChIPQC:::GetGRanges("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/MacsPeaks//mycch12rep2_peaks.xls", sep="\t", simple=F)
+firstPeakSet <- ChIPQC:::GetGRanges("C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/MacsPeaks//mycch12rep1_peaks.xls", sep="\t", simple=F)
+secondPeakSet <- ChIPQC:::GetGRanges("C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/MacsPeaks//mycch12rep2_peaks.xls", sep="\t", simple=F)
 
 ## ----commonpeaks_2, eval=T, echo=T, warning=FALSE------------------------
 OnlyfirstPeakSet <- firstPeakSet[!firstPeakSet %over% secondPeakSet]
@@ -211,21 +211,6 @@ Kegg_MycPeaks <- addKeggTogoseq(Kegg_MycPeaks,temp)
 Kegg_MycPeaks[1:4,]
 
 
-## ----eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T-----------------
-library(rGREAT)
-seqlevelsStyle(commonPeaks) <- "UCSC"
-
-## ----eval=T,echo=T, eval=T, echo=T,messages=F,message=F,warning=FALSE,tidy=T----
-great_Job <- submitGreatJob(commonPeaks,species="mm9")
-availableCategories(great_Job)
-
-## ----eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T-----------------
-great_ResultTable = getEnrichmentTables(great_Job,category=
-                          "Regulatory Motifs")
-names(great_ResultTable)
-great_ResultTable[["MSigDB Predicted Promoter Motifs"]][1:4,]
-
-
 ## ---- echo=TRUE,collapse=F-----------------------------------------------
 
 library(BSgenome)
@@ -250,20 +235,6 @@ commonPeaksSequences[1:2,]
 writeXStringSet(commonPeaksSequences,file="consensusPeaks.fa")
 
 
-## ----eval=T,echo=F,cache=T-----------------------------------------------
-library(AnnotationHub)
-ah = AnnotationHub()
-rowResults <- display(ah)
-
-## ----eval=F,echo=T,cache=T-----------------------------------------------
-## library(AnnotationHub)
-## ah = AnnotationHub()
-## rowResults <- display(ah)
-
-## ----eval=T,echo=T,cache=T-----------------------------------------------
-query(ah, c("Myc","BED", "Mus Musculus"))
-cmycAnnoHub <- ah[["AH28051"]]
-cmycAnnoHub[1:3,]
 
 ## ----eval=F,echo=T,cache=T-----------------------------------------------
 library(rtracklayer)
@@ -333,7 +304,7 @@ PeaksToCount <- resize(highConfidence_Only,width = 400,fix = "center")
 PeaksToCount[1:2,]
 
 ## ---- echo=TRUE----------------------------------------------------------
-load("C:/Users/mkari10/Desktop/LMS_ChIPseq_short-master/LMS_ChIPseq_short-master/course/data/robjects/MycCounts.Rdata")
+load("C:/Users/mkari10/Desktop/LMSBioinformatics-LMS_ChIPseq_short/course/data/robjects/MycCounts.Rdata")
 countTable[1:3,]
 
 ## ---- echo=TRUE----------------------------------------------------------
