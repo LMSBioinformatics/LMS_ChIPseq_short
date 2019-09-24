@@ -86,14 +86,15 @@ To install these,</p>
 <li>First launch RStudio</li>
 <li>Install the packages in the R console
 <pre>
-source("<a href="https://bioconductor.org/biocLite.R">https://bioconductor.org/biocLite.R</a>")
-biocLite("GenomicRanges")
-biocLite("ChIPQC")
-biocLite("BSgenome.Mmusculus.UCSC.mm9")
-biocLite("ChIPseeker")
-biocLite("goseq")
-biocLite("rGREAT")
-biocLite("AnnotationHub")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("GenomicRanges")
+BiocManager::install("ChIPQC")
+BiocManager::install("BSgenome.Mmusculus.UCSC.mm9")
+BiocManager::install("ChIPseeker")
+BiocManager::install("goseq")
+BiocManager::install("rGREAT")
+BiocManager::install("AnnotationHub")
 </pre>
 </li>
 </ul>
