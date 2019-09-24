@@ -1,7 +1,7 @@
 ChIP-seq 
 ========================================================
 author:MRC LMS Bioinformatics Core
-date:https://lmsbioinformatics.github.io/LMS_ChIPseq_short
+date:https://github.com/LMSBioinformatics/LMS_ChIPseq_short
 width: 1440
 height: 1100
 autosize: true
@@ -24,7 +24,7 @@ In this course we will use a few of the packages from the comprehensive reposito
 
 We will cover some of the basics of quality control, working with peaks, motif identification and functional analysis. 
 
-For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://lmsbioinformatics.github.io/LMS_chipseqcourse).
+For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://github.com/LMSBioinformatics/LMS_chipseqcourse).
 
 ========================================================
 
@@ -82,17 +82,17 @@ This data is composed of Myc chip for two cell lines, Mel and Ch12 cell lines, e
 
 Due to the short time we have together the data has been processed from unaligned reads to called peaks. 
 
-For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://lmsbioinformatics.github.io/LMS_chipseqcourse/).
+For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://github.com/LMSBioinformatics/LMS_chipseqcourse/).
 
 Materials.
 ========================================================
 id: materials
 
 All material for this course can be found on github.
-* [ChIPseq_short](https://lmsbioinformatics.github.io/LMS_ChIPseq_short)
+* [ChIPseq_short](https://github.com/LMSBioinformatics/LMS_ChIPseq_short)
 
 Or can be downloaded as a zip archive from here. 
-* [Download zip](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/archive/master.zip)
+* [Download zip](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/archive/master.zip)
 
 Materials. - Presentations, source code and practicals.
 ========================================================
@@ -409,7 +409,7 @@ id: peakpushing
 
 Macs2 is a frequently used peak caller and works well to identify both punctate and broad peaks.
 
-For more details on peak calling steps for data in this course you can visit our [material](https://lmsbioinformatics.github.io/LMS_chipseqcourse/blob/master/Precticals_pres/peakCallingForMyc).
+For more details on peak calling steps for data in this course you can visit our [material](https://github.com/LMSBioinformatics/LMS_chipseqcourse/blob/master/Precticals_pres/peakCallingForMyc).
 
 For more details on MACS2, see the github page for MACS2 software
 * [MACS2 github page](https://github.com/taoliu/MACS).
@@ -851,32 +851,29 @@ length(commonPeaks)
 Time for a exercise.
 =========================================================
 
-Exercise on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
+Exercise on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
+Answers on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
 
-Rcode for "Working with peaks" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks.R).
-
-
-Time to install a package.
-=========================================================
-
-In this next section we will be using a package ,**rGREAT**, which has not been pre-installed on these machines.
-
-We saw how to install packages in R and Bioconductor sessions.
-
-You can go to the [rGREAT Bioconductor page](https://www.bioconductor.org/packages/release/bioc/html/rGREAT.html) and follow their instrutions or simply paste the below code into the console.
+Rcode for "Working with peaks" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/WorkingWithPeaks.R).
 
 
-```r
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+<!-- Time to install a package. -->
+<!-- ========================================================= -->
 
-BiocManager::install("rGREAT")
-```
+<!-- In this next section we will be using a package ,**rGREAT**, which has not been pre-installed on these machines. -->
+
+<!-- We saw how to install packages in R and Bioconductor sessions. -->
+
+<!-- You can go to the [rGREAT Bioconductor page](https://www.bioconductor.org/packages/release/bioc/html/rGREAT.html) and follow their instrutions or simply paste the below code into the console. -->
+
+<!-- ```{r,eval=F} -->
+<!-- source("https://bioconductor.org/biocLite.R") -->
+<!-- biocLite("rGREAT") -->
+<!-- ``` -->
 
 
 Functional Annotation of peaks
@@ -960,13 +957,13 @@ peakAnno <- annotatePeak(commonPeaks, tssRegion = c(-1000, 1000), TxDb = TxDb.Mm
 ```
 
 ```
->> preparing features information...		 2019-09-20 15:35:17 
->> identifying nearest features...		 2019-09-20 15:35:18 
->> calculating distance from peak to TSS...	 2019-09-20 15:35:19 
->> assigning genomic annotation...		 2019-09-20 15:35:19 
->> adding gene annotation...			 2019-09-20 15:35:32 
->> assigning chromosome lengths			 2019-09-20 15:35:33 
->> done...					 2019-09-20 15:35:33 
+>> preparing features information...		 2019-09-24 12:41:12 
+>> identifying nearest features...		 2019-09-24 12:41:12 
+>> calculating distance from peak to TSS...	 2019-09-24 12:41:13 
+>> assigning genomic annotation...		 2019-09-24 12:41:13 
+>> adding gene annotation...			 2019-09-24 12:41:25 
+>> assigning chromosome lengths			 2019-09-24 12:41:25 
+>> done...					 2019-09-24 12:41:25 
 ```
 
 Peak annotation
@@ -1057,7 +1054,7 @@ Now we have the annotated peaks from ChIPseeker we can use some of ChIPseeker's 
 plotAnnoBar(peakAnno)
 ```
 
-![plot of chunk unnamed-chunk-31](ChIPseq-figure/unnamed-chunk-31-1.png)
+![plot of chunk unnamed-chunk-30](ChIPseq-figure/unnamed-chunk-30-1.png)
 
 Visualising peak annotation
 =========================================================
@@ -1069,7 +1066,7 @@ Similarly we can plot the distribution of peaks around TSS sites.
 plotDistToTSS(peakAnno)
 ```
 
-![plot of chunk unnamed-chunk-32](ChIPseq-figure/unnamed-chunk-32-1.png)
+![plot of chunk unnamed-chunk-31](ChIPseq-figure/unnamed-chunk-31-1.png)
 
 Visualising peak annotation
 =========================================================
@@ -1081,7 +1078,7 @@ ChIPseeker can also offer a succinct plot to describe the overlap between annota
 upsetplot(peakAnno, vennpie = F)
 ```
 
-![plot of chunk unnamed-chunk-33](ChIPseq-figure/unnamed-chunk-33-1.png)
+![plot of chunk unnamed-chunk-32](ChIPseq-figure/unnamed-chunk-32-1.png)
 
 
 Gene Ontology and geneset testing.
@@ -1209,73 +1206,824 @@ Kegg_MycPeaks[1:4, ]
 ```
 
 
-Gene ontology and functional testing. GREAT method.
+<!-- Gene ontology and functional testing. GREAT method. -->
+<!-- ========================================================= -->
+
+<!-- In addition to a standard enrichment tests, methods have been implemented specifically for ChIP-seq. Many of these tools aim to incorporate peaks distal to genes into their enrichment testing such as the popular [GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) toolset. -->
+
+<!-- Incorporating distal peaks by rules such as nearest gene results in some genes having a higher chance of being selected and hence some genesets as a whole having a higher chance of having its members selected. -->
+
+<!-- [GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) defines regulatory regions for each, individual gene and compares the proportion of peaks mapping to a geneset's regulatory regions to the proportion of the genome occupied by geneset's regulatory regions. -->
+
+<!-- i.e. If a gene set's regulatory regions account for 1% of the genome then one might expect 1% of peaks to overlap these regions by chance. -->
+
+<!-- rGREAT - R interface to GREAT server. -->
+<!-- ========================================================= -->
+
+<!-- We can use the GREAT Bioconductor interface available in the rGREAT package. Since GREAT uses UCSC annotation lets make sure our peaks our in UCSC style. -->
+
+<!-- ```{r,eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T} -->
+<!-- library(rGREAT) -->
+<!-- seqlevelsStyle(commonPeaks) <- "UCSC" -->
+<!-- ``` -->
+
+<!-- Gene ontology and functional testing. GREAT method. -->
+<!-- ========================================================= -->
+
+<!-- To submit jobs we can use our GRanges of commonPeaks and specify a genome with the **submitGreatJob** function. -->
+
+<!-- This function returns a GreatJob object containing a reference to our results on the GREAT server. To review the categories of results available we can use the availableCategories function on our GreatJob object. -->
+
+<!-- ```{r,eval=T,echo=T, eval=T, echo=T,messages=F,message=F,warning=FALSE,tidy=T} -->
+<!-- great_Job <- submitGreatJob(commonPeaks,species="mm9") -->
+<!-- availableCategories(great_Job) -->
+<!-- ``` -->
+
+<!-- Gene ontology and functional testing. GREAT method. -->
+<!-- ========================================================= -->
+
+<!-- The results table can be retrieved using the getEnrichmentTables function and specifying which tables we wish to review. -->
+
+<!-- Here we retrieve the results tables for the "MSigDB Predicted Promoter Motifs" genesets which contains 2 seperate database results. -->
+
+<!-- ```{r,eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T} -->
+<!-- great_ResultTable = getEnrichmentTables(great_Job,category= -->
+<!--                           "Regulatory Motifs") -->
+<!-- names(great_ResultTable) -->
+<!-- great_ResultTable[["MSigDB Predicted Promoter Motifs"]][1:4,] -->
+
+<!-- ``` -->
+
+Time for an exercise
 =========================================================
 
-In addition to a standard enrichment tests, methods have been implemented specifically for ChIP-seq. Many of these tools aim to incorporate peaks distal to genes into their enrichment testing such as the popular [GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) toolset.
+Exercise on "Functional Annotation of peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks_Exercises.html).
 
-Incorporating distal peaks by rules such as nearest gene results in some genes having a higher chance of being selected and hence some genesets as a whole having a higher chance of having its members selected.
-
-[GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) defines regulatory regions for each, individual gene and compares the proportion of peaks mapping to a geneset's regulatory regions to the proportion of the genome occupied by geneset's regulatory regions.
-
-i.e. If a gene set's regulatory regions account for 1% of the genome then one might expect 1% of peaks to overlap these regions by chance.
-
-rGREAT - R interface to GREAT server.
+Time for a solution.
 =========================================================
 
-We can use the GREAT Bioconductor interface available in the rGREAT package. Since GREAT uses UCSC annotation lets make sure our peaks our in UCSC style.
+Answers on "Functional Annotation of peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks_Solutions.html).
+
+Rcode for "Functional Annotation of peaks" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks.R).
+
+Identifying Motifs
+==========================================================
+id: motifs
+
+A common practice in transcription factor ChIP-seq is to investigate the motifs enriched under peaks. 
+
+Denovo motif enrichment can be performed in R/Bioconductor but this can be very time consuming. Here we will use the Meme-ChIP suite available online to identify denovo motifs.
+
+Meme-ChIP requires a FASTA file of sequences under peaks as input so we extract this using the **BSgenome** package.
+
+Extracting sequences under regions
+============================
+
+First we need to load the BSgenome object for the genome we are working on, UCSC's mm9 build for the mouse genome. Again we ensure that the chromosome names and style for our common peaks [defined earlier](#/makingcommonpeaks) matches that seen in UCSC.
 
 
+```r
+library(BSgenome)
+library(BSgenome.Mmusculus.UCSC.mm9)
+genome <- BSgenome.Mmusculus.UCSC.mm9
+seqlevelsStyle(commonPeaks) <- "UCSC"
+```
+
+Extracting sequences under regions
+============================
+
+The motif for the ChIP-ed transcription factor should in the centre of a peak. Meme-ChIP will trim our peaks to a common length internally if sequences are of different length.
+
+It is best therefore to provide a peak set resized to a common length.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```r
+commonPeaks <- resize(commonPeaks,300,fix="center")
+commonPeaks[1:4,]
+```
 
 ```
-Error in library(rGREAT) : there is no package called 'rGREAT'
+GRanges object with 4 ranges and 0 metadata columns:
+      seqnames          ranges strand
+         <Rle>       <IRanges>  <Rle>
+  [1]     chr1 4661501-4661800      *
+  [2]     chr1 4775606-4775905      *
+  [3]     chr1 4847584-4847883      *
+  [4]     chr1 5015913-5016212      *
+  -------
+  seqinfo: 22 sequences from an unspecified genome; no seqlengths
 ```
+
+Extracting sequences under regions
+============================
+
+Once we have recentered our peaks we can use the **getSeq** function with our GRanges of resized common peaks and the BSgenome object for mm9.
+
+The **getSeq** function returns a *DNAStringSet* object containing sequences under peaks. 
+
+Here we provide names to the elements of the DNAStringSet as we did for GRanges objects earlier.
+
+
+```r
+commonPeaksSequences <- getSeq(genome,GRanges(commonPeaks))
+names(commonPeaksSequences) <- paste0("peak_",seqnames(commonPeaks),"_",
+                                         start(commonPeaks),
+                                         "-",
+                                         end(commonPeaks))
+
+commonPeaksSequences[1:2,]
+```
+
+```
+  A DNAStringSet instance of length 2
+    width seq                                          names               
+[1]   300 AGTAGTACACAGTTAAAGCAA...TGAGGCTTTGAAGTTGAGAC peak_chr1_4661501...
+[2]   300 CAGAGTGACGCGGCCCCTGCA...ATCCGCGTCGGTAGGCTATG peak_chr1_4775606...
+```
+
+Writing to FASTA file
+============================
+
+The *writeXStringSet* function allows the user to write DNA/RNA/AA(aminoacid)StringSet objects out to file. 
+
+By default the *writeXStringSet* function writes the sequence information in FASTA format (as required for Meme-ChIP).
+
+
+```r
+writeXStringSet(commonPeaksSequences,file="consensusPeaks.fa")
+```
+
+Now the file "consensusPeaks.fa" contains sequences around the geometric centre of peaks suitable for Motif analysis in Meme-ChIP. 
+
+In your own work you will typically run this from a big machine (such as a cluster) with Meme installed locally but today we will upload our generated FASTA file to their [web portal](http://meme-suite.org/tools/meme-chip). 
+
+Results files from Meme-ChIP can be found [here](http://mrccsc.github.io/myc_Meme_Example/meme-chip.html)
+
+Time for an exercise
+=========================================================
+Exercise on "Identifying Motifs" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Exercises.html).
+
+Time for a solution.
+=========================================================
+
+Answers on "Identifying Motifs" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Solutions.html).
+
+Rcode for "Identifying Motifs" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/IdentifingMotifs.R).
+
+
+Getting hold of Data
+========================================================
+id: external
+
+Often external datasets for ChIP-seq would be useful to integrate with your own analysis.
+
+AnnotationHub provides a nice interactive interface to retreive data from a range of repositories covering epigenetic or expression data into R.
+
+Try the code below for yourself.
+
+
+
+```r
+library(AnnotationHub)
+ah = AnnotationHub()
+rowResults <- display(ah)
+```
+
+Getting hold of Data
+========================================================
+
+AnnotationHub may also be used in non-interactive modes.
+
+To search AnnotationHub by keywords we can use the *query* function on the AnnotationHub object. This provides information on how to retrieve data too.
+
+```r
+query(ah, c("Myc","BED", "Mus Musculus"))
+```
+
+```
+AnnotationHub with 1 record
+# snapshotDate(): 2019-05-02 
+# names(): AH28051
+# $dataprovider: Haemcode
+# $species: Mus musculus
+# $rdataclass: GRanges
+# $rdatadateadded: 2015-03-12
+# $title: c-Myc_GSM912934_MEL.bed
+# $description: peak file from Haemcode
+# $taxonomyid: 10090
+# $genome: mm10
+# $sourcetype: BED
+# $sourceurl: http://haemcode.stemcells.cam.ac.uk/blood/Peaks/mm10/c-My...
+# $sourcesize: 303496
+# $tags: c("c-Myc_GSM912934_MEL", "Mouse ErythroLeukaemic", "[CL]
+#   MEL", "BTO:0004475", "Myc", "17869", "GSE36030", "GSM912934",
+#   "tf") 
+# retrieve record with 'object[["AH28051"]]' 
+```
+
+```r
+# cmycAnnoHub <- ah[["AH28051"]]
+# cmycAnnoHub[1:3,]
+```
+ 
+Exporting tracks for Visualisation
+==========================================================
+id: vis
+
+Having produced our consensus sets or GRanges of any description it is useful to visualise this in a genome browser. 
+
+One fast, locally installed browser is the Broad's Integrative Genome Browser (IGV).
+IGV is available from [BROAD](http://www.broadinstitute.org/software/igv/download) and our quick course in IGV is available [here](https://github.com/LMSBioinformatics/LMS_IGV_course/).
+
+To export GRanges from R into a ".bed" format acceptable to IGV (or other browser types) we can use the export.bed function from rtracklayer.
+
+
+```r
+library(rtracklayer)
+export.bed(commonPeaks,con = "consensusPeaksForIGV.bed")
+```
+
+<!-- Time for an exercise -->
+<!-- ========================================================= -->
+<!-- Exercise on "External Data and Visualisation" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Exercises.html). -->
+
+<!-- Installing a package to a personal directory. -->
+<!-- ========================================================= -->
+
+<!-- Sometimes you will be working on a machine you don't have full permissions for. -->
+
+<!-- In these cases it is possible to install into and use a library from a local directory. -->
+
+<!-- * Create a directory on your desktop called Rlibs. -->
+
+<!-- * Download zipped file for [BSgenome.Mmusculus.UCSC.mm10  package](http://bioconductor.org/packages/release/data/annotation/html/BSgenome.Mmusculus.UCSC.mm10.html) required for the bonus question manually. [(Direct Download)](http://bioconductor.org/packages/release/data/annotation/src/contrib/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz) -->
+
+<!-- * Install using install.packages using the Rlibs directory as your library location. -->
+
+<!-- ```{r,eval=F,echo=T,cache=T} -->
+<!-- # Something like this -->
+<!-- install.packages( "C:/Users/MYUSERNAME/Desktop/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz", lib="C:/Users/MYUSERNAME/Desktop/Rlibs", repos = NULL, type = "source" -->
+<!--                   ) -->
+
+<!-- library(BSgenome.Mmusculus.UCSC.mm10, lib.loc="C:/Users/MYUSERNAME/Rlibs" -->
+<!--         ) -->
+<!-- ``` -->
+
+
+<!-- Time for a solution. -->
+<!-- ========================================================= -->
+
+<!-- Answers on "External Data and Visualisation" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Solutions.html). -->
+
+<!-- Rcode for "External Data and Visualisation" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation.R). -->
+
+
+Working with complex overlaps
+=========================================================
+id: complexOverlaps
+
+When working with a larger number of transcription factor marks it can be useful to establish a common flattened peak set for all marks and to score the overlap for each peak set to flattened peaks.
+
+So, first lets read in the data and flatten all peaksets into one set.
+
+
+```r
+listOfPeaks <- GRangesList(lapply(macsPeaksFiles,
+                                  function(x)ChIPQC:::GetGRanges(x,sep="\t",simplify=T)
+                                  )
+                           )
+flattenedPeaks <- reduce(unlist(listOfPeaks))
+```
+
+=========================================================
+![alt text](imgs/flattened.png)
+
+The next step would be to identify when samples shared peaks
+========================================================
+
+```r
+matOfOverlaps <- sapply(listOfPeaks,function(x)
+                          as.integer(flattenedPeaks %over% x)
+                        )
+
+colnames(matOfOverlaps) <- basename(gsub("_peaks\\.xls","",macsPeaksFiles))
+
+
+mcols(flattenedPeaks) <- matOfOverlaps
+
+flattenedPeaks[1:2,]
+```
+
+```
+GRanges object with 2 ranges and 4 metadata columns:
+      seqnames          ranges strand | mycch12rep1 mycch12rep2 mycmelrep1
+         <Rle>       <IRanges>  <Rle> |   <integer>   <integer>  <integer>
+  [1]        1 3049670-3049833      * |           0           0          1
+  [2]        1 3435991-3436154      * |           0           0          1
+      mycmelrep2
+       <integer>
+  [1]          0
+  [2]          0
+  -------
+  seqinfo: 22 sequences from an unspecified genome; no seqlengths
+```
+
+========================================================
+We can get a quick idea about where overlaps occur using vennCounts
+
+
+```r
+library(limma)
+vennCounts(as.data.frame(mcols(flattenedPeaks)))
+```
+
+```
+   mycch12rep1 mycch12rep2 mycmelrep1 mycmelrep2 Counts
+1            0           0          0          0      0
+2            0           0          0          1   7155
+3            0           0          1          0  18588
+4            0           0          1          1  15314
+5            0           1          0          0  16038
+6            0           1          0          1   1053
+7            0           1          1          0   2178
+8            0           1          1          1   3327
+9            1           0          0          0   3589
+10           1           0          0          1    205
+11           1           0          1          0    271
+12           1           0          1          1    414
+13           1           1          0          0  14409
+14           1           1          0          1   1322
+15           1           1          1          0   1238
+16           1           1          1          1   9868
+attr(,"class")
+[1] "VennCounts"
+```
+
+
+========================================================
+Or we can view as VennDiagram
+
+
+```r
+vennDiagram(as.data.frame(elementMetadata(flattenedPeaks)))
+```
+
+![plot of chunk unnamed-chunk-49](ChIPseq-figure/unnamed-chunk-49-1.png)
+
+We can check the Venn to see our numbers add up
+
+========================================================
+Now we can identify common peaks
+
+
+```r
+mych12Peaks <- flattenedPeaks[elementMetadata(flattenedPeaks)$mycch12rep1 + elementMetadata(flattenedPeaks)$mycch12rep2 == 2]
+mycMelPeaks <- flattenedPeaks[elementMetadata(flattenedPeaks)$mycmelrep1 +  elementMetadata(flattenedPeaks)$mycmelrep2 == 2]
+
+mych12Peaks[1:3,]
+```
+
+```
+GRanges object with 3 ranges and 4 metadata columns:
+      seqnames          ranges strand | mycch12rep1 mycch12rep2 mycmelrep1
+         <Rle>       <IRanges>  <Rle> |   <integer>   <integer>  <integer>
+  [1]        1 4661367-4661934      * |           1           1          0
+  [2]        1 4775337-4776125      * |           1           1          1
+  [3]        1 4847097-4848050      * |           1           1          1
+      mycmelrep2
+       <integer>
+  [1]          0
+  [2]          1
+  [3]          1
+  -------
+  seqinfo: 22 sequences from an unspecified genome; no seqlengths
+```
+
+========================================================
+![alt text](imgs/highCon.png)
+
+
+========================================================
+And some unique peaks 
+
+```r
+mycMelPeaks_Only <- flattenedPeaks[elementMetadata(flattenedPeaks)$mycmelrep1 + elementMetadata(flattenedPeaks)$mycmelrep2 == 2 &
+elementMetadata(flattenedPeaks)$mycch12rep1 + 
+                 elementMetadata(flattenedPeaks)$mycch12rep2 == 0]
+
+mycMelPeaks_Only[1,]
+```
+
+```
+GRanges object with 1 range and 4 metadata columns:
+      seqnames          ranges strand | mycch12rep1 mycch12rep2 mycmelrep1
+         <Rle>       <IRanges>  <Rle> |   <integer>   <integer>  <integer>
+  [1]        1 7606348-7606524      * |           0           0          1
+      mycmelrep2
+       <integer>
+  [1]          1
+  -------
+  seqinfo: 22 sequences from an unspecified genome; no seqlengths
+```
+
+========================================================
+![alt text](imgs/Mel_Only.png)
+
+
+
+
+
+Simple Differential binding
+========================================================
+id: diffchip
+
+Analysis of the differences in ChIP-seq data can often benefit from a more quantitative analysis. Many tools used in RNA-seq analysis studies can be applied to ChIP data including favorites such as DEseq2 and EdgeR.
+
+Inorder to assess difference we first needed to identify peaks common within groups. Here we take our previously prepared set made of flattened peaks and identify those reproducible peaks in either group.
+
+
+
+```r
+highConfidence_Only <- flattenedPeaks[elementMetadata(flattenedPeaks)$mycmelrep1 +                  elementMetadata(flattenedPeaks)$mycmelrep2 == 2 |
+elementMetadata(flattenedPeaks)$mycch12rep1 + 
+                 elementMetadata(flattenedPeaks)$mycch12rep2 == 2]
+```
+
+========================================================
+![alt text](imgs/forDB.png)
+
+Simple Differential binding
+========================================================
+Now we can look to see if we need resizing.
+
+```r
+boxplot(width(highConfidence_Only))
+abline(h=400,col="red")
+```
+
+![plot of chunk unnamed-chunk-53](ChIPseq-figure/unnamed-chunk-53-1.png)
+
+The majority of peaks are around 400 so we will resize all peaks to this for ease here
+
+Simple Differential binding
+========================================================
+Now we can resize to a sensible size
+
+```r
+PeaksToCount <- resize(highConfidence_Only,width = 400,fix = "center")
+PeaksToCount[1:2,]
+```
+
+```
+GRanges object with 2 ranges and 4 metadata columns:
+      seqnames          ranges strand | mycch12rep1 mycch12rep2 mycmelrep1
+         <Rle>       <IRanges>  <Rle> |   <integer>   <integer>  <integer>
+  [1]        1 4661451-4661850      * |           1           1          0
+  [2]        1 4775531-4775930      * |           1           1          1
+      mycmelrep2
+       <integer>
+  [1]          0
+  [2]          1
+  -------
+  seqinfo: 22 sequences from an unspecified genome; no seqlengths
+```
+
+Simple Differential binding
+========================================================
+
+Once we have our peakset we can can count the reads mapping to peaks from all samples.
+Many options are available for counting including Rsubread package's FeatureCounts method and GenomicAlignments' summarizeOverlaps function.
+
+For a more detailed description of counting, please take a look at some of our previous material.
+
+For now, we can import the counts produced on this course into our present R session.
+
+
+```r
+load("data/robjects/MycCounts.Rdata")
+countTable <- countTable[,-c(3,6)]
+
+countTable[1:3,]
+```
+
+```
+                      ch12myc ch12myc melmyc melmyc
+ID1-1;4661451-4661850      45      81      0      1
+ID2-1;4775531-4775930      56      68     59     47
+ID3-1;4847374-4847773      51      46     64     70
+```
+
+Simple Differential binding - A simple DEseq2 DE analysis
+========================================================
+Here we set up a DEseq2 object much as you would for RNAseq.
+
+We define the conditions in **colData** as celllines for Mel and ch12 as in RNAseq and provide a table of the counts in peak.
+
+In contrast to the RNAseq DEseq2 setup we will provide additional information of the GRanges for peaks to the rowRanges argument.
+
+
+```r
+library("DESeq2")
+
+colData <- data.frame(SampleName=paste0(colnames(countTable),c(1,2)), CellLine=c("ch12","ch12","mel","mel"))
+
+colnames(countTable) <-  colData$SampleName
+dds <- DESeqDataSetFromMatrix(countData = countTable,
+                              colData = colData,
+                              design = ~ CellLine,
+                              rowRanges=PeaksToCount)
+
+dds <- DESeq(dds)
+```
+
+Simple Differential binding - A simple DEseq2 DE analysis
+========================================================
+
+Now we have our dds object with rowRanges we can extract the results for differences between celllines as seen for RNA-seq.
+
+In contrast to RNA-seq, we specify the "GRanges" format in our call to *results* function.
+
+Finally we subset our GRanges to produce a GRanges of peaks with significantly higher signal in Mel cell line.
+
+
+```r
+test_cellline <- results(dds, contrast=c("CellLine","ch12","mel"),
+                         format="GRanges")
+
+UpinMel <- test_cellline[test_cellline$padj < 0.05 & !is.na(test_cellline$padj) 
+                         & test_cellline$log2FoldChange > 0]
+
+UpinMel
+```
+
+```
+GRanges object with 14634 ranges and 6 metadata columns:
+                                seqnames              ranges strand |
+                                   <Rle>           <IRanges>  <Rle> |
+          ID1-1;4661451-4661850        1     4661451-4661850      * |
+          ID4-1;5015863-5016262        1     5015863-5016262      * |
+          ID6-1;5210772-5211171        1     5210772-5211171      * |
+          ID7-1;5273188-5273587        1     5273188-5273587      * |
+          ID9-1;6252315-6252714        1     6252315-6252714      * |
+                            ...      ...                 ...    ... .
+  ID45884-X;166410701-166411100        X 166410701-166411100      * |
+  ID45885-X;166417005-166417404        X 166417005-166417404      * |
+  ID45886-X;166428102-166428501        X 166428102-166428501      * |
+  ID45887-X;166434992-166435391        X 166434992-166435391      * |
+        ID45889-Y;307700-308099        Y       307700-308099      * |
+                                        baseMean   log2FoldChange
+                                       <numeric>        <numeric>
+          ID1-1;4661451-4661850 33.4987258065535 7.22030032288329
+          ID4-1;5015863-5016262  11.492741487773 4.01128347553125
+          ID6-1;5210772-5211171 12.5818260145118  4.7517271021384
+          ID7-1;5273188-5273587 15.8972913963059 4.50076914167956
+          ID9-1;6252315-6252714 24.4950641604032 5.73897203757724
+                            ...              ...              ...
+  ID45884-X;166410701-166411100 73.6663018288351 4.38898230258325
+  ID45885-X;166417005-166417404 108.464233028677 3.15624745989976
+  ID45886-X;166428102-166428501 89.0604007646183 2.84317416306789
+  ID45887-X;166434992-166435391 48.2298270233863 6.15382638780086
+        ID45889-Y;307700-308099 28.8586281179605 7.00076407045592
+                                            lfcSE             stat
+                                        <numeric>        <numeric>
+          ID1-1;4661451-4661850  1.53570142126731 4.70163029277192
+          ID4-1;5015863-5016262   1.2177153892343 3.29410592244675
+          ID6-1;5210772-5211171  1.35143174162522 3.51606888885413
+          ID7-1;5273188-5273587  1.12528610908257 3.99966648957301
+          ID9-1;6252315-6252714  1.20609297125709 4.75831646012795
+                            ...               ...              ...
+  ID45884-X;166410701-166411100  0.53059084615728 8.27187716179002
+  ID45885-X;166417005-166417404 0.389907618250926 8.09485968511788
+  ID45886-X;166428102-166428501 0.423258322223824 6.71734969824028
+  ID45887-X;166434992-166435391 0.955056503006767 6.44341603708996
+        ID45889-Y;307700-308099  1.54835524166375 4.52141981508933
+                                              pvalue                 padj
+                                           <numeric>            <numeric>
+          ID1-1;4661451-4661850 2.58092492556339e-06  1.6023242246206e-05
+          ID4-1;5015863-5016262 0.000987352841511528  0.00246450359916256
+          ID6-1;5210772-5211171 0.000437987324473888  0.00122018541217481
+          ID7-1;5273188-5273587 6.34318107858661e-05 0.000233385124716184
+          ID9-1;6252315-6252714 1.95214281072272e-06 1.26876841622556e-05
+                            ...                  ...                  ...
+  ID45884-X;166410701-166411100 1.31866129082079e-16 2.07958776489167e-14
+  ID45885-X;166417005-166417404 5.73303977828751e-16 7.67057322172508e-14
+  ID45886-X;166428102-166428501 1.85059486433119e-11 7.06521017636951e-10
+  ID45887-X;166434992-166435391 1.16813906138065e-10 3.58104460954447e-09
+        ID45889-Y;307700-308099  6.1426228115764e-06 3.29935915342772e-05
+  -------
+  seqinfo: 22 sequences from an unspecified genome; no seqlengths
+```
+
+Session Information
+=========================================================
+
+
+```r
+sessionInfo()
+```
+
+```
+R version 3.6.0 (2019-04-26)
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+Running under: macOS High Sierra 10.13.2
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+
+locale:
+[1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] limma_3.40.6                           
+ [2] BSgenome.Mmusculus.UCSC.mm9_1.4.0      
+ [3] BSgenome_1.52.0                        
+ [4] rtracklayer_1.44.4                     
+ [5] Biostrings_2.52.0                      
+ [6] XVector_0.24.0                         
+ [7] goseq_1.36.0                           
+ [8] geneLenDataBase_1.20.0                 
+ [9] BiasedUrn_1.07                         
+[10] KEGG.db_3.2.3                          
+[11] ChIPseeker_1.20.0                      
+[12] org.Mm.eg.db_3.8.2                     
+[13] TxDb.Mmusculus.UCSC.mm9.knownGene_3.2.2
+[14] GenomicFeatures_1.36.4                 
+[15] AnnotationDbi_1.46.1                   
+[16] DESeq2_1.24.0                          
+[17] ChIPQC_1.20.0                          
+[18] DiffBind_2.12.0                        
+[19] SummarizedExperiment_1.14.1            
+[20] DelayedArray_0.10.0                    
+[21] BiocParallel_1.18.1                    
+[22] matrixStats_0.55.0                     
+[23] Biobase_2.44.0                         
+[24] GenomicRanges_1.36.1                   
+[25] GenomeInfoDb_1.20.0                    
+[26] IRanges_2.18.2                         
+[27] S4Vectors_0.22.1                       
+[28] BiocGenerics_0.30.0                    
+[29] ggplot2_3.2.1                          
+[30] knitr_1.25                             
+
+loaded via a namespace (and not attached):
+  [1] tidyselect_0.2.5                         
+  [2] RSQLite_2.1.2                            
+  [3] htmlwidgets_1.3                          
+  [4] grid_3.6.0                               
+  [5] munsell_0.5.0                            
+  [6] base64url_1.4                            
+  [7] systemPipeR_1.18.2                       
+  [8] withr_2.1.2                              
+  [9] colorspace_1.4-1                         
+ [10] GOSemSim_2.10.0                          
+ [11] Category_2.50.0                          
+ [12] highr_0.8                                
+ [13] rstudioapi_0.10                          
+ [14] DOSE_3.10.2                              
+ [15] labeling_0.3                             
+ [16] urltools_1.7.3                           
+ [17] GenomeInfoDbData_1.2.1                   
+ [18] hwriter_1.3.2                            
+ [19] polyclip_1.10-0                          
+ [20] bit64_0.9-7                              
+ [21] farver_1.1.0                             
+ [22] pheatmap_1.0.12                          
+ [23] batchtools_0.9.11                        
+ [24] vctrs_0.2.0                              
+ [25] TxDb.Rnorvegicus.UCSC.rn4.ensGene_3.2.2  
+ [26] xfun_0.9                                 
+ [27] R6_2.4.0                                 
+ [28] graphlayouts_0.5.0                       
+ [29] locfit_1.5-9.1                           
+ [30] gridGraphics_0.4-1                       
+ [31] bitops_1.0-6                             
+ [32] fgsea_1.10.1                             
+ [33] assertthat_0.2.1                         
+ [34] scales_1.0.0                             
+ [35] ggraph_2.0.0                             
+ [36] nnet_7.3-12                              
+ [37] enrichplot_1.4.0                         
+ [38] gtable_0.3.0                             
+ [39] tidygraph_1.1.2                          
+ [40] rlang_0.4.0                              
+ [41] zeallot_0.1.0                            
+ [42] genefilter_1.66.0                        
+ [43] splines_3.6.0                            
+ [44] lazyeval_0.2.2                           
+ [45] acepack_1.4.1                            
+ [46] europepmc_0.3                            
+ [47] brew_1.0-6                               
+ [48] checkmate_1.9.4                          
+ [49] yaml_2.2.0                               
+ [50] reshape2_1.4.3                           
+ [51] TxDb.Dmelanogaster.UCSC.dm3.ensGene_3.2.2
+ [52] backports_1.1.4                          
+ [53] qvalue_2.16.0                            
+ [54] Hmisc_4.2-0                              
+ [55] RBGL_1.60.0                              
+ [56] tools_3.6.0                              
+ [57] gridBase_0.4-7                           
+ [58] ggplotify_0.0.4                          
+ [59] gplots_3.0.1.1                           
+ [60] RColorBrewer_1.1-2                       
+ [61] ggridges_0.5.1                           
+ [62] Rcpp_1.0.2                               
+ [63] plyr_1.8.4                               
+ [64] base64enc_0.1-3                          
+ [65] progress_1.2.2                           
+ [66] zlibbioc_1.30.0                          
+ [67] purrr_0.3.2                              
+ [68] RCurl_1.95-4.12                          
+ [69] prettyunits_1.0.2                        
+ [70] rpart_4.1-15                             
+ [71] viridis_0.5.1                            
+ [72] cowplot_1.0.0                            
+ [73] chipseq_1.34.0                           
+ [74] ggrepel_0.8.1                            
+ [75] cluster_2.1.0                            
+ [76] magrittr_1.5                             
+ [77] data.table_1.12.2                        
+ [78] TxDb.Hsapiens.UCSC.hg18.knownGene_3.2.2  
+ [79] DO.db_2.9                                
+ [80] triebeard_0.3.0                          
+ [81] amap_0.8-17                              
+ [82] hms_0.5.1                                
+ [83] evaluate_0.14                            
+ [84] xtable_1.8-4                             
+ [85] XML_3.98-1.20                            
+ [86] gridExtra_2.3                            
+ [87] compiler_3.6.0                           
+ [88] biomaRt_2.40.4                           
+ [89] tibble_2.1.3                             
+ [90] KernSmooth_2.23-15                       
+ [91] crayon_1.3.4                             
+ [92] htmltools_0.3.6                          
+ [93] GOstats_2.50.0                           
+ [94] mgcv_1.8-28                              
+ [95] Formula_1.2-3                            
+ [96] tidyr_1.0.0                              
+ [97] geneplotter_1.62.0                       
+ [98] DBI_1.0.0                                
+ [99] tweenr_1.0.1                             
+[100] formatR_1.7                              
+[101] MASS_7.3-51.4                            
+[102] rappdirs_0.3.1                           
+[103] boot_1.3-23                              
+[104] ShortRead_1.42.0                         
+[105] Matrix_1.2-17                            
+[106] gdata_2.18.0                             
+[107] igraph_1.2.4.1                           
+[108] pkgconfig_2.0.2                          
+[109] TxDb.Hsapiens.UCSC.hg19.knownGene_3.2.2  
+[110] rvcheck_0.1.3                            
+[111] GenomicAlignments_1.20.1                 
+[112] foreign_0.8-72                           
+[113] TxDb.Celegans.UCSC.ce6.ensGene_3.2.2     
+[114] xml2_1.2.2                               
+[115] annotate_1.62.0                          
+[116] AnnotationForge_1.26.0                   
+[117] stringr_1.4.0                            
+[118] VariantAnnotation_1.30.1                 
+[119] digest_0.6.20                            
+[120] graph_1.62.0                             
+[121] fastmatch_1.1-0                          
+[122] htmlTable_1.13.1                         
+[123] edgeR_3.26.8                             
+[124] GSEABase_1.46.0                          
+[125] Rsamtools_2.0.0                          
+[126] gtools_3.8.1                             
+[127] rjson_0.2.20                             
+[128] nlme_3.1-141                             
+[129] lifecycle_0.1.0                          
+[130] jsonlite_1.6                             
+[131] viridisLite_0.3.0                        
+[132] pillar_1.4.2                             
+[133] lattice_0.20-38                          
+[134] Nozzle.R1_1.1-1                          
+[135] plotrix_3.7-6                            
+[136] httr_1.4.1                               
+[137] survival_2.44-1.1                        
+[138] GO.db_3.8.2                              
+[139] glue_1.3.1                               
+[140] UpSetR_1.4.0                             
+[141] bit_1.1-14                               
+[142] Rgraphviz_2.28.0                         
+[143] ggforce_0.3.1                            
+[144] stringi_1.4.3                            
+[145] blob_1.2.0                               
+[146] TxDb.Mmusculus.UCSC.mm10.knownGene_3.4.7 
+[147] latticeExtra_0.6-28                      
+[148] caTools_1.17.1.2                         
+[149] memoise_1.1.0                            
+[150] dplyr_0.8.3                              
+```
+
+THE END!
+=========================================================
+
+

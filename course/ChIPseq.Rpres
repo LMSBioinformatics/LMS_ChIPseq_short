@@ -1,7 +1,7 @@
 ChIP-seq 
 ========================================================
 author:MRC LMS Bioinformatics Core
-date:https://lmsbioinformatics.github.io/LMS_ChIPseq_short
+date:https://github.com/LMSBioinformatics/LMS_ChIPseq_short
 width: 1440
 height: 1100
 autosize: true
@@ -26,7 +26,7 @@ In this course we will use a few of the packages from the comprehensive reposito
 
 We will cover some of the basics of quality control, working with peaks, motif identification and functional analysis. 
 
-For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://lmsbioinformatics.github.io/LMS_chipseqcourse).
+For more details on alignment, working with ChIP-seq coverage and peak calling you can join us on [our extended course](https://github.com/LMSBioinformatics/LMS_chipseqcourse).
 
 ========================================================
 
@@ -84,17 +84,17 @@ This data is composed of Myc chip for two cell lines, Mel and Ch12 cell lines, e
 
 Due to the short time we have together the data has been processed from unaligned reads to called peaks. 
 
-For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://lmsbioinformatics.github.io/LMS_chipseqcourse/).
+For full details on the analysis/processing of this data with all analysis steps covered in R/Bioconductor are available on [github](https://github.com/LMSBioinformatics/LMS_chipseqcourse/).
 
 Materials.
 ========================================================
 id: materials
 
 All material for this course can be found on github.
-* [ChIPseq_short](https://lmsbioinformatics.github.io/LMS_ChIPseq_short)
+* [ChIPseq_short](https://github.com/LMSBioinformatics/LMS_ChIPseq_short)
 
 Or can be downloaded as a zip archive from here. 
-* [Download zip](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/archive/master.zip)
+* [Download zip](https://github.com/LMSBioinformatics/LMS_ChIPseq_short/archive/master.zip)
 
 Materials. - Presentations, source code and practicals.
 ========================================================
@@ -384,7 +384,7 @@ id: peakpushing
 
 Macs2 is a frequently used peak caller and works well to identify both punctate and broad peaks.
 
-For more details on peak calling steps for data in this course you can visit our [material](https://lmsbioinformatics.github.io/LMS_chipseqcourse/blob/master/Precticals_pres/peakCallingForMyc).
+For more details on peak calling steps for data in this course you can visit our [material](https://github.com/LMSBioinformatics/LMS_chipseqcourse/blob/master/Precticals_pres/peakCallingForMyc).
 
 For more details on MACS2, see the github page for MACS2 software
 * [MACS2 github page](https://github.com/taoliu/MACS).
@@ -631,31 +631,29 @@ length(commonPeaks)
 Time for a exercise.
 =========================================================
 
-Exercise on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
+Exercise on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
+Answers on "Working with peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/WorkingWithPeaks_Solutions.html).
 
-Rcode for "Working with peaks" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/WorkingWithPeaks.R).
+Rcode for "Working with peaks" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/WorkingWithPeaks.R).
 
 
-Time to install a package.
-=========================================================
+<!-- Time to install a package. -->
+<!-- ========================================================= -->
 
-In this next section we will be using a package ,**rGREAT**, which has not been pre-installed on these machines.
+<!-- In this next section we will be using a package ,**rGREAT**, which has not been pre-installed on these machines. -->
 
-We saw how to install packages in R and Bioconductor sessions.
+<!-- We saw how to install packages in R and Bioconductor sessions. -->
 
-You can go to the [rGREAT Bioconductor page](https://www.bioconductor.org/packages/release/bioc/html/rGREAT.html) and follow their instrutions or simply paste the below code into the console.
+<!-- You can go to the [rGREAT Bioconductor page](https://www.bioconductor.org/packages/release/bioc/html/rGREAT.html) and follow their instrutions or simply paste the below code into the console. -->
 
-```{r,eval=F}
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install("rGREAT")
-```
+<!-- ```{r,eval=F} -->
+<!-- source("https://bioconductor.org/biocLite.R") -->
+<!-- biocLite("rGREAT") -->
+<!-- ``` -->
 
 
 Functional Annotation of peaks
@@ -864,64 +862,65 @@ Kegg_MycPeaks[1:4,]
 ```
 
 
-Gene ontology and functional testing. GREAT method.
-=========================================================
+<!-- Gene ontology and functional testing. GREAT method. -->
+<!-- ========================================================= -->
 
-In addition to a standard enrichment tests, methods have been implemented specifically for ChIP-seq. Many of these tools aim to incorporate peaks distal to genes into their enrichment testing such as the popular [GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) toolset.
+<!-- In addition to a standard enrichment tests, methods have been implemented specifically for ChIP-seq. Many of these tools aim to incorporate peaks distal to genes into their enrichment testing such as the popular [GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) toolset. -->
 
-Incorporating distal peaks by rules such as nearest gene results in some genes having a higher chance of being selected and hence some genesets as a whole having a higher chance of having its members selected.
+<!-- Incorporating distal peaks by rules such as nearest gene results in some genes having a higher chance of being selected and hence some genesets as a whole having a higher chance of having its members selected. -->
 
-[GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) defines regulatory regions for each, individual gene and compares the proportion of peaks mapping to a geneset's regulatory regions to the proportion of the genome occupied by geneset's regulatory regions.
+<!-- [GREAT](http://bejerano.stanford.edu/great/public/html/splash.php) defines regulatory regions for each, individual gene and compares the proportion of peaks mapping to a geneset's regulatory regions to the proportion of the genome occupied by geneset's regulatory regions. -->
 
-i.e. If a gene set's regulatory regions account for 1% of the genome then one might expect 1% of peaks to overlap these regions by chance.
+<!-- i.e. If a gene set's regulatory regions account for 1% of the genome then one might expect 1% of peaks to overlap these regions by chance. -->
 
-rGREAT - R interface to GREAT server.
-=========================================================
+<!-- rGREAT - R interface to GREAT server. -->
+<!-- ========================================================= -->
 
-We can use the GREAT Bioconductor interface available in the rGREAT package. Since GREAT uses UCSC annotation lets make sure our peaks our in UCSC style.
+<!-- We can use the GREAT Bioconductor interface available in the rGREAT package. Since GREAT uses UCSC annotation lets make sure our peaks our in UCSC style. -->
 
-```{r,eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T}
-library(rGREAT)
-seqlevelsStyle(commonPeaks) <- "UCSC"
-```
+<!-- ```{r,eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T} -->
+<!-- library(rGREAT) -->
+<!-- seqlevelsStyle(commonPeaks) <- "UCSC" -->
+<!-- ``` -->
 
-Gene ontology and functional testing. GREAT method.
-=========================================================
+<!-- Gene ontology and functional testing. GREAT method. -->
+<!-- ========================================================= -->
 
-To submit jobs we can use our GRanges of commonPeaks and specify a genome with the **submitGreatJob** function.
+<!-- To submit jobs we can use our GRanges of commonPeaks and specify a genome with the **submitGreatJob** function. -->
 
-This function returns a GreatJob object containing a reference to our results on the GREAT server. To review the categories of results available we can use the availableCategories function on our GreatJob object.
+<!-- This function returns a GreatJob object containing a reference to our results on the GREAT server. To review the categories of results available we can use the availableCategories function on our GreatJob object. -->
 
-```{r,eval=T,echo=T, eval=T, echo=T,messages=F,message=F,warning=FALSE,tidy=T}
-great_Job <- submitGreatJob(commonPeaks,species="mm9")
-availableCategories(great_Job)
-```
+<!-- ```{r,eval=T,echo=T, eval=T, echo=T,messages=F,message=F,warning=FALSE,tidy=T} -->
+<!-- great_Job <- submitGreatJob(commonPeaks,species="mm9") -->
+<!-- availableCategories(great_Job) -->
+<!-- ``` -->
 
-Gene ontology and functional testing. GREAT method.
-=========================================================
+<!-- Gene ontology and functional testing. GREAT method. -->
+<!-- ========================================================= -->
 
-The results table can be retrieved using the getEnrichmentTables function and specifying which tables we wish to review.
+<!-- The results table can be retrieved using the getEnrichmentTables function and specifying which tables we wish to review. -->
 
-Here we retrieve the results tables for the "MSigDB Predicted Promoter Motifs" genesets which contains 2 seperate database results.
+<!-- Here we retrieve the results tables for the "MSigDB Predicted Promoter Motifs" genesets which contains 2 seperate database results. -->
 
-```{r,eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T}
-great_ResultTable = getEnrichmentTables(great_Job,category=
-                          "Regulatory Motifs")
-names(great_ResultTable)
-great_ResultTable[["MSigDB Predicted Promoter Motifs"]][1:4,]
+<!-- ```{r,eval=T,echo=T, eval=T, echo=T, warning=FALSE,tidy=T} -->
+<!-- great_ResultTable = getEnrichmentTables(great_Job,category= -->
+<!--                           "Regulatory Motifs") -->
+<!-- names(great_ResultTable) -->
+<!-- great_ResultTable[["MSigDB Predicted Promoter Motifs"]][1:4,] -->
 
-```
+<!-- ``` -->
 
 Time for an exercise
 =========================================================
-Exercise on "Functional Annotation of peaks" can be found [here](http://mrccsc.github.io/ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks_Exercises.html).
+
+Exercise on "Functional Annotation of peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Functional Annotation of peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/FunctionalAnnotationOfPeaks_Solutions.html).
+Answers on "Functional Annotation of peaks" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks_Solutions.html).
 
-Rcode for "Functional Annotation of peaks" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/FunctionalAnnotationOfPeaks.R).
+Rcode for "Functional Annotation of peaks" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/FunctionalAnnotationOfPeaks.R).
 
 Identifying Motifs
 ==========================================================
@@ -997,14 +996,14 @@ Results files from Meme-ChIP can be found [here](http://mrccsc.github.io/myc_Mem
 
 Time for an exercise
 =========================================================
-Exercise on "Identifying Motifs" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs_Exercises.html).
+Exercise on "Identifying Motifs" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Exercises.html).
 
 Time for a solution.
 =========================================================
 
-Answers on "Identifying Motifs" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs_Solutions.html).
+Answers on "Identifying Motifs" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/IdentifingMotifs_Solutions.html).
 
-Rcode for "Identifying Motifs" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/IdentifingMotifs.R).
+Rcode for "Identifying Motifs" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/IdentifingMotifs.R).
 
 
 Getting hold of Data
@@ -1035,8 +1034,8 @@ AnnotationHub may also be used in non-interactive modes.
 To search AnnotationHub by keywords we can use the *query* function on the AnnotationHub object. This provides information on how to retrieve data too.
 ```{r,eval=T,echo=T,cache=T}
 query(ah, c("Myc","BED", "Mus Musculus"))
-cmycAnnoHub <- ah[["AH28051"]]
-cmycAnnoHub[1:3,]
+# cmycAnnoHub <- ah[["AH28051"]]
+# cmycAnnoHub[1:3,]
 ```
  
 Exporting tracks for Visualisation
@@ -1046,7 +1045,7 @@ id: vis
 Having produced our consensus sets or GRanges of any description it is useful to visualise this in a genome browser. 
 
 One fast, locally installed browser is the Broad's Integrative Genome Browser (IGV).
-IGV is available from [BROAD](http://www.broadinstitute.org/software/igv/download) and our quick course in IGV is available [here](https://lmsbioinformatics.github.io/LMS_IGV_course/).
+IGV is available from [BROAD](http://www.broadinstitute.org/software/igv/download) and our quick course in IGV is available [here](https://github.com/LMSBioinformatics/LMS_IGV_course/).
 
 To export GRanges from R into a ".bed" format acceptable to IGV (or other browser types) we can use the export.bed function from rtracklayer.
 
@@ -1056,39 +1055,39 @@ export.bed(commonPeaks,con = "consensusPeaksForIGV.bed")
 
 ```
 
-Time for an exercise
-=========================================================
-Exercise on "External Data and Visualisation" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation_Exercises.html).
+<!-- Time for an exercise -->
+<!-- ========================================================= -->
+<!-- Exercise on "External Data and Visualisation" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Exercises.html). -->
 
-Installing a package to a personal directory.
-=========================================================
+<!-- Installing a package to a personal directory. -->
+<!-- ========================================================= -->
 
-Sometimes you will be working on a machine you don't have full permissions for.
+<!-- Sometimes you will be working on a machine you don't have full permissions for. -->
 
-In these cases it is possible to install into and use a library from a local directory.
+<!-- In these cases it is possible to install into and use a library from a local directory. -->
 
-* Create a directory on your desktop called Rlibs.
+<!-- * Create a directory on your desktop called Rlibs. -->
 
-* Download zipped file for [BSgenome.Mmusculus.UCSC.mm10  package](http://bioconductor.org/packages/release/data/annotation/html/BSgenome.Mmusculus.UCSC.mm10.html) required for the bonus question manually. [(Direct Download)](http://bioconductor.org/packages/release/data/annotation/src/contrib/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz)
+<!-- * Download zipped file for [BSgenome.Mmusculus.UCSC.mm10  package](http://bioconductor.org/packages/release/data/annotation/html/BSgenome.Mmusculus.UCSC.mm10.html) required for the bonus question manually. [(Direct Download)](http://bioconductor.org/packages/release/data/annotation/src/contrib/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz) -->
 
-* Install using install.packages using the Rlibs directory as your library location.
+<!-- * Install using install.packages using the Rlibs directory as your library location. -->
 
-```{r,eval=F,echo=T,cache=T}
-# Something like this
-install.packages( "C:/Users/MYUSERNAME/Desktop/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz", lib="C:/Users/MYUSERNAME/Desktop/Rlibs", repos = NULL, type = "source"
-                  )
+<!-- ```{r,eval=F,echo=T,cache=T} -->
+<!-- # Something like this -->
+<!-- install.packages( "C:/Users/MYUSERNAME/Desktop/BSgenome.Mmusculus.UCSC.mm10_1.4.0.tar.gz", lib="C:/Users/MYUSERNAME/Desktop/Rlibs", repos = NULL, type = "source" -->
+<!--                   ) -->
 
-library(BSgenome.Mmusculus.UCSC.mm10, lib.loc="C:/Users/tcarroll/MYUSERNAME/Rlibs"
-        )
-```
+<!-- library(BSgenome.Mmusculus.UCSC.mm10, lib.loc="C:/Users/MYUSERNAME/Rlibs" -->
+<!--         ) -->
+<!-- ``` -->
 
 
-Time for a solution.
-=========================================================
+<!-- Time for a solution. -->
+<!-- ========================================================= -->
 
-Answers on "External Data and Visualisation" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation_Solutions.html).
+<!-- Answers on "External Data and Visualisation" can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation_Solutions.html). -->
 
-Rcode for "External Data and Visualisation" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/blob/master/course/presentations/practicals/External_Data_and_Visualisation.R).
+<!-- Rcode for "External Data and Visualisation" solutions can be found [here](https://lmsbioinformatics.github.io/LMS_ChIPseq_short/course/presentations/practicals/External_Data_and_Visualisation.R). -->
 
 
 Working with complex overlaps
